@@ -1,0 +1,10 @@
+# Idea settings
+.idea
+
+# node_modules dependencies
+node_modules
+
+# android
+gen
+
+
