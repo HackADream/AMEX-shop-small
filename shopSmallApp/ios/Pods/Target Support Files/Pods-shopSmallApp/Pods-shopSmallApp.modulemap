@@ -1,0 +1,6 @@
+module Pods_shopSmallApp {
+  umbrella header "Pods-shopSmallApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
