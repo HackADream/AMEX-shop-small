@@ -13,12 +13,12 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import {
-  ApplicationProvider,
-  Button,
-  Icon,
-  IconRegistry,
-  Layout,
-  Text,
+    ApplicationProvider,
+    Button,
+    Icon, IconProps,
+    IconRegistry,
+    Layout,
+    Text,
 } from '@ui-kitten/components';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
 import * as eva from '@eva-design/eva';
@@ -27,7 +27,7 @@ import * as eva from '@eva-design/eva';
  * Use any valid `name` property from eva icons (e.g `github`, or `heart-outline`)
  * https://akveo.github.io/eva-icons
  */
-const HeartIcon = (props) => (
+const HeartIcon = (props:IconProps) => (
   <Icon {...props} name='heart'/>
 );
 
