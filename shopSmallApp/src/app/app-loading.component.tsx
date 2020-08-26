@@ -10,30 +10,6 @@ export interface ApplicationLoaderProps {
     children: (config: any) => React.ReactElement;
 }
 
-export const LoadFontsTask = (fonts: { [key: string]: number }): Promise<TaskResult> => {
-    const message: string = [
-        'There is no need to use this task in Bare RN Project.',
-        'Use `react-native.config.js',
-        'Documentation: https://github.com/react-native-community/cli/blob/master/docs/configuration.md',
-    ].join('\n');
-
-    console.warn(message);
-
-    return Promise.resolve(null);
-};
-
-export const LoadAssetsTask = (assets: number[]): Promise<TaskResult> => {
-    const message: string = [
-        'There is no need to use this task in Bare RN Project.',
-        'Use `react-native.config.js',
-        'Documentation: https://github.com/react-native-community/cli/blob/master/docs/configuration.md',
-    ].join('\n');
-
-    console.warn(message);
-
-    return Promise.resolve(null);
-};
-
 export const AppLoading = (props: ApplicationLoaderProps): React.ReactElement => {
 
     const [loading, setLoading] = React.useState<boolean>(true);

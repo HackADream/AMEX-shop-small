@@ -4,25 +4,14 @@ import { AppearanceProvider } from 'react-native-appearance';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
-import { AppLoading, LoadFontsTask, Task } from './app-loading.component';
+import { AppLoading } from './app-loading.component';
 import { appMappings, appThemes } from './app-theming';
 import { AppIconsPack } from './app-icons-pack';
 import { StatusBar } from '../components/status-bar.component';
 import { SplashImage } from '../components/splash-image.component';
-import { AppStorage } from '../services/app-storage.service';
 import { Mapping, Theme, Theming } from '../services/theme.service';
 import {AppNavigator} from "../navigation/app.navigation";
 
-const loadingTasks: Task[] = [
-    // Should be used it when running Expo.
-    // In Bare RN Project this is configured by react-native.config.js
-    () => LoadFontsTask({
-        'opensans-regular': require('../assets/fonts/opensans-regular.ttf'),
-        'roboto-regular': require('../assets/fonts/roboto-regular.ttf'),
-    }),
-    () => AppStorage.getMapping(defaultConfig.mapping).then(result => ['mapping', result]),
-    () => AppStorage.getTheme(defaultConfig.theme).then(result => ['theme', result]),
-];
 
 const defaultConfig: { mapping: Mapping, theme: Theme } = {
     mapping: 'eva',
@@ -62,7 +51,6 @@ const Splash = ({ loading }): React.ReactElement => (
 
 export default (): React.ReactElement => (
     <AppLoading
-        tasks={loadingTasks}
         initialConfig={defaultConfig}
         placeholder={Splash}>
         {props => <App {...props}/>}
