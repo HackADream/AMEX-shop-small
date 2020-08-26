@@ -11,6 +11,7 @@ import { StatusBar } from '../components/status-bar.component';
 import { SplashImage } from '../components/splash-image.component';
 import { AppStorage } from '../services/app-storage.service';
 import { Mapping, Theme, Theming } from '../services/theme.service';
+import {AppNavigator} from "../navigation/app.navigation";
 
 const loadingTasks: Task[] = [
     // Should be used it when running Expo.
@@ -42,6 +43,7 @@ const App = ({ mapping, theme }): React.ReactElement => {
                         <Theming.ThemeContext.Provider value={themeContext}>
                             <SafeAreaProvider>
                                 <StatusBar/>
+                                <AppNavigator/>
                             </SafeAreaProvider>
                         </Theming.ThemeContext.Provider>
                     </Theming.MappingContext.Provider>

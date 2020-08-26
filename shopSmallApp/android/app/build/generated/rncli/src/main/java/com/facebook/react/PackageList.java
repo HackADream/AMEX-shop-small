@@ -11,12 +11,22 @@ import com.facebook.react.shell.MainReactPackage;
 import java.util.Arrays;
 import java.util.ArrayList;
 
+// @react-native-community/masked-view
+import org.reactnative.maskedview.RNCMaskedViewPackage;
 // react-native-appearance
 import io.expo.appearance.RNCAppearancePackage;
 // react-native-safe-area-context
 import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 // react-native-svg
 import com.horcrux.svg.SvgPackage;
+// react-native-device-info
+import com.learnium.RNDeviceInfo.RNDeviceInfo;
+// react-native-gesture-handler
+import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+// react-native-reanimated
+import com.swmansion.reanimated.ReanimatedPackage;
+// react-native-screens
+import com.swmansion.rnscreens.RNScreensPackage;
 
 public class PackageList {
   private Application application;
@@ -62,9 +72,14 @@ public class PackageList {
   public ArrayList<ReactPackage> getPackages() {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
+      new RNCMaskedViewPackage(),
       new RNCAppearancePackage(),
       new SafeAreaContextPackage(),
-      new SvgPackage()
+      new SvgPackage(),
+      new RNDeviceInfo(),
+      new RNGestureHandlerPackage(),
+      new ReanimatedPackage(),
+      new RNScreensPackage()
     ));
   }
 }

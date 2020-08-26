@@ -13,14 +13,15 @@ class StatusBarComponent extends React.Component<StatusBarProps> {
     static styledComponentName: string = 'StatusBar';
 
     public render(): React.ReactElement<ViewProps> {
-        const { ...statusBarProps } = this.props;
+        const { themedStyle, ...statusBarProps } = this.props;
 
         return (
             <RNStatusBar
+                {...themedStyle}
                 {...statusBarProps}
             />
         );
     }
 }
 
-export const StatusBar = styled(StatusBarComponent.styledComponentName);
+export const StatusBar = styled(StatusBarComponent);
