@@ -1,57 +1,47 @@
+
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import {
-    ApplicationProvider,
-    Button,
-    Icon, IconProps,
-    IconRegistry,
-    Layout,
-    Text,
-} from '@ui-kitten/components';
+import { AppearanceProvider } from 'react-native-appearance';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
-import * as eva from '@eva-design/eva';
+import { appMappings, appThemes } from './app-theming';
+import { AppIconsPack } from './app-icons-pack';
+import { StatusBar } from '../components/status-bar.component';
+import { SplashImage } from '../components/splash-image.component';
+import { Theming } from '../services/theme.service';
+import {AppNavigator} from "../navigation/app.navigation";
 
-const HeartIcon = (props:IconProps) => (
-    <Icon {...props} name='heart'/>
-);
 
-const App = () => {
+const App = (): React.ReactElement => {
+
+    const [mappingContext, currentMapping] = Theming.useMapping(appMappings, "eva");
+    const [themeContext, currentTheme] = Theming.useTheming(appThemes, "eva", "light");
+
     return (
-        <>
-            <IconRegistry icons={EvaIconsPack}/>
-            <ApplicationProvider {...eva} theme={eva.light}>
-                <Layout style={styles.container}>
-                    <Text style={styles.text} category='h1'>
-                        Welcome to UI Kitten 😻
-                    </Text>
-                    <Text style={styles.text} category='s1'>
-                        Start with editing App.js to configure your App
-                    </Text>
-                    <Text style={styles.text} appearance='hint'>
-                        For example, try changing theme to Dark by using eva.dark
-                    </Text>
-                    <Button style={styles.likeButton} accessoryLeft={HeartIcon}>
-                        LIKE
-                    </Button>
-                </Layout>
-            </ApplicationProvider>
-        </>
-    )
+        <React.Fragment>
+            <IconRegistry icons={[EvaIconsPack, AppIconsPack]}/>
+            <AppearanceProvider>
+                <ApplicationProvider {...currentMapping} theme={currentTheme}>
+                    <Theming.MappingContext.Provider value={mappingContext}>
+                        <Theming.ThemeContext.Provider value={themeContext}>
+                            <SafeAreaProvider>
+                                <StatusBar/>
+                                <AppNavigator/>
+                            </SafeAreaProvider>
+                        </Theming.ThemeContext.Provider>
+                    </Theming.MappingContext.Provider>
+                </ApplicationProvider>
+            </AppearanceProvider>
+        </React.Fragment>
+    );
 };
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    text: {
-        textAlign: 'center',
-    },
-    likeButton: {
-        marginVertical: 16,
-    },
-});
+// const Splash = ({ loading }): React.ReactElement => (
+//     <SplashImage
+//         loading={loading}
+//         source={require('../assets/images/shop-small.png')}
+//     />
+// );
 
 export default (): React.ReactElement => (
     <App/>

@@ -1,10 +1,52 @@
-# Idea settings
+npm-debug.*
+*.jks
+*.jks.bak
+*.p12
+*.key
+*.mobileprovision
+
+# osx
+.DS_Store
+
+# intellij
 .idea
+local.properties
 
-# node_modules dependencies
-node_modules
+# node.js
+node_modules/
+node_modules/**/*
+npm-debug.log
 
-# android
-gen
+# env
+env/index.js
 
+# expo
 
+.expo
+.expo/*
+.expo-shared/
+web-build/
+
+dist
+
+# Bundle artifact
+*.jsbundle
+
+# native
+
+# Android/IntelliJ
+#
+build/
+.gradle
+*.iml
+*.apk
+
+# BUCK
+buck-out/
+\.buckd/
+*.keystore
+!debug.keystore
+
+# CocoaPods
+/ios/Pods/
+gen/
