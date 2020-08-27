@@ -5,13 +5,15 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { MainBottomNavigation } from '../scenes/main/main-bottom-navigation.component';
 import { HomeNavigator } from "./home.navigator";
+import { ExploreNavigator } from "./explore.navigator";
+import { UserNavigator } from "./user.navigation";
 
 const BottomTab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
 
 const initialTabRoute: string = 'Home';
 
-const ROOT_ROUTES: string[] = ['Main', 'Home', 'Explore', 'You'];
+const ROOT_ROUTES: string[] = ['Main', 'Home', 'Explore', 'User'];
 
 const isOneOfRootRoutes = (currentRoute: RouteProp<any, any>): boolean => {
     return ROOT_ROUTES.find(route => currentRoute.name === route) !== undefined;
@@ -28,8 +30,8 @@ const MainTabsNavigator = (): React.ReactElement => (
         initialRouteName={initialTabRoute}
         tabBar={props => <MainBottomNavigation {...props} />}>
         <BottomTab.Screen name='Home' component={HomeNavigator}/>
-        <BottomTab.Screen name='Explore' component={HomeNavigator}/>
-        <BottomTab.Screen name='You' component={HomeNavigator}/>
+        <BottomTab.Screen name='Explore' component={ExploreNavigator}/>
+        <BottomTab.Screen name='User' component={UserNavigator}/>
     </BottomTab.Navigator>
 );
 

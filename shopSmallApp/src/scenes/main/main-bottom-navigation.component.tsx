@@ -17,7 +17,7 @@ export const MainBottomNavigation = (props): React.ReactElement => {
         <Icon name='map' {...props} />
     );
 
-    const YouIcon = (props) => (
+    const UserIcon = (props) => (
         <Icon name='person' {...props} />
     );
 
@@ -38,7 +38,7 @@ export const MainBottomNavigation = (props): React.ReactElement => {
                 />
                 <BottomNavigationTab
                     title='You'
-                    icon={YouIcon}
+                    icon={UserIcon}
                 />
             </BrandBottomNavigation>
         </SafeAreaLayout>
