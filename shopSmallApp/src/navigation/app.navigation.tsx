@@ -1,6 +1,6 @@
 import React from 'react';
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
-import { HomeNavigator } from './home.navigator';
+import { MainNavigator } from './main.navigator';
 
 const navigatorTheme = {
     ...DefaultTheme,
@@ -13,6 +13,6 @@ const navigatorTheme = {
 
 export const AppNavigator = (): React.ReactElement => (
     <NavigationContainer theme={navigatorTheme}>
-        <HomeNavigator/>
+        <MainNavigator/>
     </NavigationContainer>
 );
