@@ -1,9 +1,9 @@
 const images = [
-    { image: require("../assets/images/banners/food-banner1.jpg") },
+    { image: require("../assets/images/banners/food-banner6.jpeg") },
+    { image: require("../assets/images/banners/food-banner7.jpeg") },
+    { image: require("../assets/images/banners/food-banner8.jpeg") },
     { image: require("../assets/images/banners/food-banner2.jpg") },
     { image: require("../assets/images/banners/food-banner3.jpg") },
-    { image: require("../assets/images/banners/food-banner4.jpg") },
-    { image: require("../assets/images/banners/food-banner5.jpg") },
 ];
 
 export const markers = [
