@@ -15,18 +15,22 @@ import java.util.ArrayList;
 import org.reactnative.maskedview.RNCMaskedViewPackage;
 // react-native-appearance
 import io.expo.appearance.RNCAppearancePackage;
-// react-native-safe-area-context
-import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
-// react-native-svg
-import com.horcrux.svg.SvgPackage;
 // react-native-device-info
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+// react-native-maps
+import com.airbnb.android.react.maps.MapsPackage;
 // react-native-reanimated
 import com.swmansion.reanimated.ReanimatedPackage;
+// react-native-safe-area-context
+import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 // react-native-screens
 import com.swmansion.rnscreens.RNScreensPackage;
+// react-native-svg
+import com.horcrux.svg.SvgPackage;
+// react-native-vector-icons
+import com.oblador.vectoricons.VectorIconsPackage;
 
 public class PackageList {
   private Application application;
@@ -74,12 +78,14 @@ public class PackageList {
       new MainReactPackage(mConfig),
       new RNCMaskedViewPackage(),
       new RNCAppearancePackage(),
-      new SafeAreaContextPackage(),
-      new SvgPackage(),
       new RNDeviceInfo(),
       new RNGestureHandlerPackage(),
+      new MapsPackage(),
       new ReanimatedPackage(),
-      new RNScreensPackage()
+      new SafeAreaContextPackage(),
+      new RNScreensPackage(),
+      new SvgPackage(),
+      new VectorIconsPackage()
     ));
   }
 }

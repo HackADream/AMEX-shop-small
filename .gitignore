@@ -50,3 +50,10 @@ buck-out/
 # CocoaPods
 /ios/Pods/
 gen/
+
+# build
+*.bin
+*.lock
+# Files
+*.dmg
+*.zip
