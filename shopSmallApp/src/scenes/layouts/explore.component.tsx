@@ -17,10 +17,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 
-import { markers, mapDarkStyle, mapStandardStyle } from '../../models/mapData';
+import { markers, mapStandardStyle } from '../../models/mapData';
 import StarRating from '../../components/star-rating.component';
-
-import { useTheme } from '@react-navigation/native';
 
 const { width, height } = Dimensions.get("window");
 const CARD_HEIGHT = 220;
