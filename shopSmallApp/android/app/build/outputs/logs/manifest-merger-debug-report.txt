@@ -10,12 +10,14 @@ MERGED from [com.facebook.flipper:flipper-network-plugin:0.33.1] /Users/sweetie/
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/5a1065d4748ae359265a740b2069d44b/flipper-fresco-plugin-0.33.1/AndroidManifest.xml:8:1-15:12
 MERGED from [:react-native-community_masked-view] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-appearance] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-appearance/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:react-native-safe-area-context] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-svg] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-device-info] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-24:12
 MERGED from [:react-native-gesture-handler] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-maps] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-12:12
 MERGED from [:react-native-reanimated] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-safe-area-context] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-svg] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-vector-icons] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.62.2] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/89070aa1ec07b195350bf0f62030ae00/jetified-react-native-0.62.2/AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android.material:material:1.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/c58ca7c082f1a11495f89e31dc3f6057/material-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/338690b81f4dc82f1b19f1d73c56fc81/recyclerview-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -39,9 +41,12 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/sweetie/.gradle/ca
 MERGED from [androidx.transition:transition:1.1.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/30b4d3e32d4613db5b24cec227d0fa01/transition-1.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/ea21396468df8be045780cd3f2969b01/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/72fb4bf3b9d1a4fb67c28eedb3c03b08/play-services-iid-17.0.0/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/dcb0caa0b7590c92c93c5bf3cc09a745/play-services-maps-17.0.0/AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/3653837072ca28c91f326ffc9a22e52c/play-services-location-17.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6d45d9e0505112f0eec54f8796757f91/play-services-base-17.0.0/AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/d913e169400b8c01c0bb4a9a48c96bb0/play-services-stats-17.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6158af36f33dab56a52a643764c9ece8/play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/2570ee8cdf5a2a7fe062aa117d18a819/play-services-places-placereport-17.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/44532050132f7774e6410b7920118951/jetified-play-services-basement-17.0.0/AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/b61b63ea7b0488553940d8a5bbdd3f9b/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/3d8e4bc7a6af7aacf11542b377d7496f/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -67,6 +72,7 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/sweetie/.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/ae802a55e74c19280a922e6de05f1e6e/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/2a1ee7c7818c2783ad723954444a3349/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/a09e382bfb3f8fa2f0c18724e52b5356/installreferrer-1.1.2/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/0c92ff82928d453d4addf897f645ce71/jetified-android-maps-utils-0.5/AndroidManifest.xml:2:1-13:12
 MERGED from [com.facebook.soloader:annotation:0.8.2] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/562a4d899b3a7a711a398f7636c8c187/annotation-0.8.2/AndroidManifest.xml:2:1-13:12
 MERGED from [com.facebook.fresco:fbcore:2.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/d996bf03bc1f0a35b905ad4962e8bf7e/jetified-fbcore-2.0.0/AndroidManifest.xml:2:1-9:12
 INJECTED from /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/android/app/src/debug/AndroidManifest.xml:2:1-8:12
@@ -93,8 +99,12 @@ uses-permission#android.permission.INTERNET
 ADDED from /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/android/app/src/main/AndroidManifest.xml:4:5-66
 MERGED from [com.facebook.flipper:flipper:0.33.1] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/a003bd0ac0737797b0a88ba9b0a4e55e/jetified-flipper-0.33.1/AndroidManifest.xml:15:5-67
 MERGED from [com.facebook.flipper:flipper:0.33.1] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/a003bd0ac0737797b0a88ba9b0a4e55e/jetified-flipper-0.33.1/AndroidManifest.xml:15:5-67
+MERGED from [:react-native-maps] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:react-native-maps] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
 MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/72fb4bf3b9d1a4fb67c28eedb3c03b08/play-services-iid-17.0.0/AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/72fb4bf3b9d1a4fb67c28eedb3c03b08/play-services-iid-17.0.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/dcb0caa0b7590c92c93c5bf3cc09a745/play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/dcb0caa0b7590c92c93c5bf3cc09a745/play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
 	android:name
 		ADDED from /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/android/app/src/main/AndroidManifest.xml:4:22-64
 application
@@ -111,12 +121,18 @@ MERGED from [com.facebook.soloader:soloader:0.8.2] /Users/sweetie/.gradle/caches
 MERGED from [com.facebook.soloader:soloader:0.8.2] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/a682a4f61b53a5eb0b34ff17728f4b20/soloader-0.8.2/AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/72fb4bf3b9d1a4fb67c28eedb3c03b08/play-services-iid-17.0.0/AndroidManifest.xml:26:5-20
 MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/72fb4bf3b9d1a4fb67c28eedb3c03b08/play-services-iid-17.0.0/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/dcb0caa0b7590c92c93c5bf3cc09a745/play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/dcb0caa0b7590c92c93c5bf3cc09a745/play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/3653837072ca28c91f326ffc9a22e52c/play-services-location-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/3653837072ca28c91f326ffc9a22e52c/play-services-location-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6d45d9e0505112f0eec54f8796757f91/play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6d45d9e0505112f0eec54f8796757f91/play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/d913e169400b8c01c0bb4a9a48c96bb0/play-services-stats-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/d913e169400b8c01c0bb4a9a48c96bb0/play-services-stats-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6158af36f33dab56a52a643764c9ece8/play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6158af36f33dab56a52a643764c9ece8/play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/2570ee8cdf5a2a7fe062aa117d18a819/play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/2570ee8cdf5a2a7fe062aa117d18a819/play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/44532050132f7774e6410b7920118951/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/44532050132f7774e6410b7920118951/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.core:core:1.1.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/4f509a65121478d6153615d7ef5b7c5f/core-1.1.0/AndroidManifest.xml:24:5-89
@@ -125,6 +141,8 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/swee
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/ee4a69f4f726969bc5c4f11a1f23bd91/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/a09e382bfb3f8fa2f0c18724e52b5356/installreferrer-1.1.2/AndroidManifest.xml:11:5-20
 MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/a09e382bfb3f8fa2f0c18724e52b5356/installreferrer-1.1.2/AndroidManifest.xml:11:5-20
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/0c92ff82928d453d4addf897f645ce71/jetified-android-maps-utils-0.5/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/0c92ff82928d453d4addf897f645ce71/jetified-android-maps-utils-0.5/AndroidManifest.xml:7:5-11:19
 MERGED from [com.facebook.soloader:annotation:0.8.2] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/562a4d899b3a7a711a398f7636c8c187/annotation-0.8.2/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:annotation:0.8.2] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/562a4d899b3a7a711a398f7636c8c187/annotation-0.8.2/AndroidManifest.xml:11:5-20
 	android:appComponentFactory
@@ -161,6 +179,8 @@ ADDED from /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/sho
 		ADDED from /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/android/app/src/main/AndroidManifest.xml:14:17-62
 uses-library#org.apache.http.legacy
 ADDED from /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/android/app/src/main/AndroidManifest.xml:16:9-87
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/dcb0caa0b7590c92c93c5bf3cc09a745/play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/dcb0caa0b7590c92c93c5bf3cc09a745/play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
 	android:required
 		ADDED from /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/android/app/src/main/AndroidManifest.xml:16:61-85
 	android:name
@@ -205,18 +225,22 @@ MERGED from [:react-native-community_masked-view] /Users/sweetie/GitHubWorkPlace
 MERGED from [:react-native-community_masked-view] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-appearance] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-appearance/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-appearance] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-appearance/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-safe-area-context] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-safe-area-context] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-svg] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-svg] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-device-info] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
 MERGED from [:react-native-device-info] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
 MERGED from [:react-native-gesture-handler] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-maps] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-maps] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-reanimated] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-reanimated] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-safe-area-context] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-safe-area-context] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-screens] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-svg] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-vector-icons] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.62.2] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/89070aa1ec07b195350bf0f62030ae00/jetified-react-native-0.62.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.62.2] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/89070aa1ec07b195350bf0f62030ae00/jetified-react-native-0.62.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.material:material:1.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/c58ca7c082f1a11495f89e31dc3f6057/material-1.0.0/AndroidManifest.xml:20:5-44
@@ -263,12 +287,18 @@ MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/sweetie/
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/ea21396468df8be045780cd3f2969b01/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/72fb4bf3b9d1a4fb67c28eedb3c03b08/play-services-iid-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/72fb4bf3b9d1a4fb67c28eedb3c03b08/play-services-iid-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/dcb0caa0b7590c92c93c5bf3cc09a745/play-services-maps-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/dcb0caa0b7590c92c93c5bf3cc09a745/play-services-maps-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/3653837072ca28c91f326ffc9a22e52c/play-services-location-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/3653837072ca28c91f326ffc9a22e52c/play-services-location-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6d45d9e0505112f0eec54f8796757f91/play-services-base-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6d45d9e0505112f0eec54f8796757f91/play-services-base-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/d913e169400b8c01c0bb4a9a48c96bb0/play-services-stats-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/d913e169400b8c01c0bb4a9a48c96bb0/play-services-stats-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6158af36f33dab56a52a643764c9ece8/play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6158af36f33dab56a52a643764c9ece8/play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/2570ee8cdf5a2a7fe062aa117d18a819/play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/2570ee8cdf5a2a7fe062aa117d18a819/play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/44532050132f7774e6410b7920118951/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/44532050132f7774e6410b7920118951/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/b61b63ea7b0488553940d8a5bbdd3f9b/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -319,6 +349,8 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/sweetie/.gradle/cache
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/2a1ee7c7818c2783ad723954444a3349/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/a09e382bfb3f8fa2f0c18724e52b5356/installreferrer-1.1.2/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/a09e382bfb3f8fa2f0c18724e52b5356/installreferrer-1.1.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/0c92ff82928d453d4addf897f645ce71/jetified-android-maps-utils-0.5/AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/0c92ff82928d453d4addf897f645ce71/jetified-android-maps-utils-0.5/AndroidManifest.xml:5:5-43
 MERGED from [com.facebook.soloader:annotation:0.8.2] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/562a4d899b3a7a711a398f7636c8c187/annotation-0.8.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.soloader:annotation:0.8.2] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/562a4d899b3a7a711a398f7636c8c187/annotation-0.8.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.fresco:fbcore:2.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/d996bf03bc1f0a35b905ad4962e8bf7e/jetified-fbcore-2.0.0/AndroidManifest.xml:5:5-7:41
@@ -355,10 +387,24 @@ action#com.android.vending.INSTALL_REFERRER
 ADDED from [:react-native-device-info] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-79
 	android:name
 		ADDED from [:react-native-device-info] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:25-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from [:react-native-maps] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from [:react-native-maps] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:22-78
 uses-permission#com.google.android.c2dm.permission.RECEIVE
 ADDED from [com.google.android.gms:play-services-iid:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/72fb4bf3b9d1a4fb67c28eedb3c03b08/play-services-iid-17.0.0/AndroidManifest.xml:23:5-82
 	android:name
 		ADDED from [com.google.android.gms:play-services-iid:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/72fb4bf3b9d1a4fb67c28eedb3c03b08/play-services-iid-17.0.0/AndroidManifest.xml:23:22-79
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/dcb0caa0b7590c92c93c5bf3cc09a745/play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/dcb0caa0b7590c92c93c5bf3cc09a745/play-services-maps-17.0.0/AndroidManifest.xml:23:22-76
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/dcb0caa0b7590c92c93c5bf3cc09a745/play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/dcb0caa0b7590c92c93c5bf3cc09a745/play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/dcb0caa0b7590c92c93c5bf3cc09a745/play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6d45d9e0505112f0eec54f8796757f91/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
 	android:exported
@@ -369,6 +415,8 @@ ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/sweetie/.gr
 		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6d45d9e0505112f0eec54f8796757f91/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
 ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/44532050132f7774e6410b7920118951/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/0c92ff82928d453d4addf897f645ce71/jetified-android-maps-utils-0.5/AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/0c92ff82928d453d4addf897f645ce71/jetified-android-maps-utils-0.5/AndroidManifest.xml:8:9-10:69
 	android:value
 		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/44532050132f7774e6410b7920118951/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
 	android:name
