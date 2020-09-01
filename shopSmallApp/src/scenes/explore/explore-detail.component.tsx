@@ -14,7 +14,7 @@ import HeaderImageScrollView, {
 
 import {SafeAreaLayout} from '../../components/safe-area-layout.component';
 import * as Animatable from 'react-native-animatable';
-import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
+import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {Icon} from "@ui-kitten/components";
 
@@ -63,11 +63,52 @@ const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
                     </Animatable.View>
                 )}
             >
-                <View style={{height: 1000}}>
-                    <TriggeringView onHide={() => console.log("text hidden")}>
-                        <Text>Scroll Me!</Text>
-                    </TriggeringView>
+                <TriggeringView
+                    style={styles.section}
+                    onHide={() => navTitleView.current.fadeInUp(200)}
+                    onDisplay={() => navTitleView.current.fadeOut(100)}>
+                    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                        <Text style={styles.title}>Overview</Text>
+                        <View style={{flexDirection: 'row', alignItems: 'flex-end'}}>
+                            <FontAwesome name="star" size={16} color="#FF6347" />
+                            <Text style={{marginHorizontal: 2}}>{data.rating}</Text>
+                            <Text>({data.reviews})</Text>
+                        </View>
+                    </View>
+                </TriggeringView>
+
+                <View style={[styles.section, styles.sectionLarge]}>
+                    <Text style={styles.sectionContent}>{data.description}</Text>
                 </View>
+
+                <View style={styles.section}>
+                    <View style={styles.categories}>
+                        {data.categories.map((category, index) => (
+                            <View style={styles.categoryContainer} key={index}>
+                                <FontAwesome name="tag" size={16} color="#fff" />
+                                <Text style={styles.category}>{category}</Text>
+                            </View>
+                        ))}
+                    </View>
+                </View>
+
+                <View style={[styles.section, {height: 250}]}>
+                    <MapView
+                        provider={PROVIDER_GOOGLE}
+                        style={{flex: 1}}
+                        region={{
+                            latitude: data.coordinate.latitude,
+                            longitude: data.coordinate.longitude,
+                            latitudeDelta: 0.00864195044303443,
+                            longitudeDelta: 0.000142817690068,
+                        }}>
+                        <Marker
+                            coordinate={data.coordinate}
+                            image={require('../../assets/images/map_marker.png')}
+                        />
+                    </MapView>
+                </View>
+
             </HeaderImageScrollView>
         </SafeAreaLayout>
     );
