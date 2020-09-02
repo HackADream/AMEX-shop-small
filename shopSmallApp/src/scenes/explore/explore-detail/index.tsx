@@ -13,7 +13,7 @@ import { Product, ProductOption } from './extra/data';
 
 const product: Product = Product.centralParkApartment();
 
-export default (): React.ReactElement => {
+export default (props): React.ReactElement => {
 
     const styles = useStyleSheet(themedStyles);
 
@@ -72,7 +72,7 @@ export default (): React.ReactElement => {
         <ScrollView style={styles.container}>
             <ImageOverlay
                 style={styles.image}
-                source={product.primaryImage}
+                source={props.data.image}
             />
             <Card
                 style={styles.bookingCard}
@@ -82,7 +82,7 @@ export default (): React.ReactElement => {
                 <Text
                     style={styles.title}
                     category='h6'>
-                    {product.title}
+                    {props.data.title}
                 </Text>
                 <Text
                     style={styles.rentLabel}

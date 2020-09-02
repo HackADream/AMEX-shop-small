@@ -24,7 +24,7 @@ const MAX_HEIGHT = 350;
 
 const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
 
-    const data = route.params.markerData;
+    const itemData = route.params.markerData;
     const navTitleView = useRef(null);
 
     const [bookmarked, setBookmarked] = React.useState<boolean>(false);
@@ -132,11 +132,11 @@ const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
             {/*</HeaderImageScrollView>*/}
 
             <TopNavigation
-                title='Product Details'
+                title={itemData.title}
                 leftControl={renderBackAction()}
                 rightControls={[renderBookmarkAction()]}
             />
-            <ContentView/>
+            <ContentView data={itemData}/>
         </SafeAreaLayout>
     );
 };
