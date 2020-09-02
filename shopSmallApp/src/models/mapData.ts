@@ -21,6 +21,7 @@ export const markers = [
         rating: 4,
         reviews: 99,
         categories: ['Restaurant', 'Hotel', 'Dineout'],
+        price: 15,
     },
     {
         id: '2',
@@ -36,6 +37,7 @@ export const markers = [
         rating: 5,
         reviews: 102,
         categories: ['Restaurant', 'Fastfood Center', 'Snacks Corner'],
+        price: 20,
     },
     {
         id: '3',
@@ -51,6 +53,7 @@ export const markers = [
         rating: 3,
         reviews: 220,
         categories: ['Restaurant', 'Hotel', 'Dineout'],
+        price: 40,
     },
     {
         id: '4',
@@ -66,6 +69,7 @@ export const markers = [
         rating: 4,
         reviews: 48,
         categories: ['Restaurant', 'Fastfood Center', 'Snacks Corner'],
+        price: 35,
     },
     {
         id: '5',
@@ -81,6 +85,7 @@ export const markers = [
         rating: 4,
         reviews: 178,
         categories: ['Restaurant', 'Hotel', 'Dineout'],
+        price: 10,
     },
     {
         id: '6',
@@ -96,6 +101,7 @@ export const markers = [
         rating: 4,
         reviews: 99,
         categories: ['Restaurant', 'Hotel', 'Dineout'],
+        price: 50,
     },
     {
         id: '7',
@@ -111,6 +117,7 @@ export const markers = [
         rating: 5,
         reviews: 102,
         categories: ['Restaurant', 'Fastfood Center', 'Snacks Corner'],
+        price: 75,
     },
 ];
 

@@ -11,7 +11,7 @@ import { Button, Card, Icon, List, StyleService, Text, useStyleSheet } from '@ui
 import { ImageOverlay } from './extra/image-overlay.component';
 import {Product, ProductOption, ProductPrice} from './extra/contentTypes';
 import MapView, {Marker, PROVIDER_GOOGLE} from "react-native-maps";
-import {SafeAreaLayout} from "../../../components/safe-area-layout.component";
+import Swiper from 'react-native-swiper';
 
 const product: Product = Product.centralParkApartment();
 
@@ -74,7 +74,7 @@ export default (props): React.ReactElement => {
         </View>
     );
 
-    const pricePerPerson: ProductPrice = new ProductPrice(15, '£', 'person');
+    const pricePerPerson: ProductPrice = new ProductPrice(props.data.price, '£', 'person');
 
     return (
         <ScrollView style={styles.container}>
@@ -122,6 +122,41 @@ export default (props): React.ReactElement => {
                 appearance='hint'>
                 {props.data.description}
             </Text>
+
+            <Text
+                style={styles.sectionLabel}
+                category='s1'>
+                Offers
+            </Text>
+            <View style={styles.sliderContainer}>
+                <Swiper
+                    autoplay
+                    horizontal={false}
+                    height={200}
+                    activeDotColor="#FF6347">
+                    <View style={styles.slide}>
+                        <Image
+                            source={require('../../../assets/images/banners/food-banner1.jpg')}
+                            resizeMode="cover"
+                            style={styles.sliderImage}
+                        />
+                    </View>
+                    <View style={styles.slide}>
+                        <Image
+                            source={require('../../../assets/images/banners/food-banner2.jpg')}
+                            resizeMode="cover"
+                            style={styles.sliderImage}
+                        />
+                    </View>
+                    <View style={styles.slide}>
+                        <Image
+                            source={require('../../../assets/images/banners/food-banner3.jpg')}
+                            resizeMode="cover"
+                            style={styles.sliderImage}
+                        />
+                    </View>
+                </Swiper>
+            </View>
             <Text
                 style={styles.sectionLabel}
                 category='s1'>
@@ -226,5 +261,19 @@ const themedStyles = StyleService.create({
         borderRadius: 8,
         marginHorizontal: 20,
         marginVertical: 10
-    }
+    },
+    slide: {
+        flex: 1,
+        justifyContent: 'center',
+        backgroundColor: 'transparent',
+        borderRadius: 8,
+        marginHorizontal: 20,
+        marginVertical: 10　
+    },
+    sliderImage: {
+        height: '100%',
+        width: '100%',
+        alignSelf: 'center',
+        borderRadius: 8,
+    },
 });
