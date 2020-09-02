@@ -9,7 +9,9 @@ import {
 } from 'react-native';
 import { Button, Card, Icon, List, StyleService, Text, useStyleSheet } from '@ui-kitten/components';
 import { ImageOverlay } from './extra/image-overlay.component';
-import { Product, ProductOption } from './extra/data';
+import {Product, ProductOption, ProductPrice} from './extra/contentTypes';
+import MapView, {Marker, PROVIDER_GOOGLE} from "react-native-maps";
+import {SafeAreaLayout} from "../../../components/safe-area-layout.component";
 
 const product: Product = Product.centralParkApartment();
 
@@ -57,16 +59,22 @@ export default (props): React.ReactElement => {
         <View>
             <Text
                 category='s1'>
-                Facilities
+                Categories
             </Text>
             <View style={styles.detailsList}>
-                {product.details.map(renderDetailItem)}
+                {props.data.categories.map(renderDetailItem)}
             </View>
+            <Text
+                category='s1'>
+                Facilities
+            </Text>
             <View style={styles.optionList}>
                 {product.options.map(renderOptionItem)}
             </View>
         </View>
     );
+
+    const pricePerPerson: ProductPrice = new ProductPrice(15, '£', 'person');
 
     return (
         <ScrollView style={styles.container}>
@@ -74,6 +82,7 @@ export default (props): React.ReactElement => {
                 style={styles.image}
                 source={props.data.image}
             />
+
             <Card
                 style={styles.bookingCard}
                 appearance='filled'
@@ -88,13 +97,13 @@ export default (props): React.ReactElement => {
                     style={styles.rentLabel}
                     appearance='hint'
                     category='p2'>
-                    Rent House
+                    Average Price
                 </Text>
                 <Text
                     style={styles.priceLabel}
                     category='h6'>
-                    {product.price.formattedValue}
-                    <Text>{product.price.formattedScale}</Text>
+                    {pricePerPerson.formattedValue}
+                    <Text>{pricePerPerson.formattedScale}</Text>
                 </Text>
                 <Button
                     style={styles.bookButton}
@@ -102,15 +111,16 @@ export default (props): React.ReactElement => {
                     BOOK NOW
                 </Button>
             </Card>
+
             <Text
                 style={styles.sectionLabel}
                 category='s1'>
-                About
+                Description
             </Text>
             <Text
                 style={styles.description}
                 appearance='hint'>
-                {product.description}
+                {props.data.description}
             </Text>
             <Text
                 style={styles.sectionLabel}
@@ -124,6 +134,28 @@ export default (props): React.ReactElement => {
                 data={product.images}
                 renderItem={renderImageItem}
             />
+
+            <Text
+                style={styles.sectionLabel}
+                category='s1'>
+                Map
+            </Text>
+            <View style={styles.mapView}>
+                <MapView
+                    provider={PROVIDER_GOOGLE}
+                    style={{flex: 1}}
+                    region={{
+                        latitude: props.data.coordinate.latitude,
+                        longitude: props.data.coordinate.longitude,
+                        latitudeDelta: 0.00864195044303443,
+                        longitudeDelta: 0.000142817690068,
+                    }}>
+                    <Marker
+                        coordinate={props.data.coordinate}
+                        image={require('../../../assets/images/map_marker.png')}
+                    />
+                </MapView>
+            </View>
         </ScrollView>
     );
 };
@@ -189,4 +221,10 @@ const themedStyles = StyleService.create({
         borderRadius: 8,
         marginHorizontal: 8,
     },
+    mapView: {
+        height: 250,
+        borderRadius: 8,
+        marginHorizontal: 20,
+        marginVertical: 10
+    }
 });

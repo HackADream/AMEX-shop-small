@@ -112,22 +112,6 @@ const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
             {/*        </View>*/}
             {/*    </View>*/}
 
-            {/*    <View style={[styles.section, {height: 250}]}>*/}
-            {/*        <MapView*/}
-            {/*            provider={PROVIDER_GOOGLE}*/}
-            {/*            style={{flex: 1}}*/}
-            {/*            region={{*/}
-            {/*                latitude: data.coordinate.latitude,*/}
-            {/*                longitude: data.coordinate.longitude,*/}
-            {/*                latitudeDelta: 0.00864195044303443,*/}
-            {/*                longitudeDelta: 0.000142817690068,*/}
-            {/*            }}>*/}
-            {/*            <Marker*/}
-            {/*                coordinate={data.coordinate}*/}
-            {/*                image={require('../../assets/images/map_marker.png')}*/}
-            {/*            />*/}
-            {/*        </MapView>*/}
-            {/*    </View>*/}
 
             {/*</HeaderImageScrollView>*/}
 
