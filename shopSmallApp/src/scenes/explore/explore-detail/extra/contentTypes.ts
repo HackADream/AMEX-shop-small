@@ -70,7 +70,7 @@ export class ProductOption {
     }
 
     static tvOption(): ProductOption {
-        return new ProductOption('tv', 'TV');
+        return new ProductOption('umbrella', 'Terrace');
     }
 
     static parkingOption(): ProductOption {
