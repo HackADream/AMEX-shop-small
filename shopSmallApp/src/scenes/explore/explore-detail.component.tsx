@@ -13,10 +13,7 @@ import HeaderImageScrollView, {
 } from 'react-native-image-header-scroll-view';
 
 import {SafeAreaLayout} from '../../components/safe-area-layout.component';
-import * as Animatable from 'react-native-animatable';
-import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import {Icon, TopNavigation, TopNavigationAction} from "@ui-kitten/components";
+import {Icon, MenuItem, OverflowMenu, TopNavigation, TopNavigationAction} from "@ui-kitten/components";
 import ContentView from "./explore-detail";
 
 const MIN_HEIGHT = Platform.OS === 'ios' ? 90 : 55;
@@ -25,24 +22,19 @@ const MAX_HEIGHT = 350;
 const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
 
     const itemData = route.params.markerData;
-    const navTitleView = useRef(null);
-
-    const [bookmarked, setBookmarked] = React.useState<boolean>(false);
+    const [visible, setVisible] = React.useState(false);
+    const [selectedTitle, setSelectedTitle] = React.useState('No items selected');
 
     const BackIcon = (props) => (
         <Icon name='arrow-ios-back' {...props} />
     );
 
-    const BookmarkIcon = (props) => (
-        <Icon name='bookmark' {...props} />
+    const MoreIcon = (props) => (
+        <Icon name='more-vertical-outline' {...props} />
     );
 
-    const BookmarkOutlineIcon = (props) => (
-        <Icon name='bookmark-outline' {...props} />
-    );
-
-    const onBookmarkActionPress = (): void => {
-        setBookmarked(!bookmarked);
+    const onMoreActionPress = (): void => {
+        setVisible(true);
     };
 
     const renderBackAction = (): React.ReactElement => (
@@ -52,12 +44,22 @@ const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
         />
     );
 
-    const renderBookmarkAction = (): React.ReactElement => (
+    const renderMoreAction = (): React.ReactElement => (
         <TopNavigationAction
-            icon={bookmarked ? BookmarkIcon : BookmarkOutlineIcon}
-            onPress={onBookmarkActionPress}
+            icon={MoreIcon}
+            onPress={onMoreActionPress}
         />
     );
+
+    const onNavigationPress = ({ index }) => {
+        setSelectedTitle('Navigation');
+        setVisible(false);
+    };
+
+    const onSharePress = ({ index }) => {
+        setSelectedTitle('Share');
+        setVisible(false);
+    };
 
     return (
         <SafeAreaLayout
@@ -67,8 +69,9 @@ const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
             <TopNavigation
                 title={itemData.title}
                 leftControl={renderBackAction()}
-                rightControls={[renderBookmarkAction()]}
+                rightControls={[renderMoreAction()]}
             />
+
             <ContentView data={itemData}/>
         </SafeAreaLayout>
     );
