@@ -64,57 +64,6 @@ const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
             style={styles.container}
             insets='top'
         >
-            {/*<HeaderImageScrollView*/}
-            {/*    maxHeight={MAX_HEIGHT}*/}
-            {/*    minHeight={MIN_HEIGHT}*/}
-            {/*    maxOverlayOpacity={0.6}*/}
-            {/*    minOverlayOpacity={0.3}*/}
-            {/*    renderHeader={() => (*/}
-            {/*        <Image source={data.image} style={styles.image}/>*/}
-            {/*    )}*/}
-            {/*    renderForeground={() => (*/}
-            {/*        <View style={styles.titleContainer}>*/}
-            {/*            <Text style={styles.imageTitle}>{data.title}</Text>*/}
-            {/*        </View>*/}
-            {/*    )}*/}
-            {/*    renderFixedForeground={() => (*/}
-            {/*        <Animatable.View style={styles.navTitleView} ref={navTitleView}>*/}
-            {/*            <Text style={styles.navTitle}>{data.title}</Text>*/}
-            {/*        </Animatable.View>*/}
-            {/*    )}*/}
-            {/*>*/}
-            {/*    <TriggeringView*/}
-            {/*        style={styles.section}*/}
-            {/*        onHide={() => navTitleView.current.fadeInUp(200)}*/}
-            {/*        onDisplay={() => navTitleView.current.fadeOut(100)}>*/}
-            {/*        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>*/}
-            {/*            <Text style={styles.title}>Overview</Text>*/}
-            {/*            <View style={{flexDirection: 'row', alignItems: 'flex-end'}}>*/}
-            {/*                <FontAwesome name="star" size={16} color="#FF6347"/>*/}
-            {/*                <Text style={{marginHorizontal: 2}}>{data.rating}</Text>*/}
-            {/*                <Text>({data.reviews})</Text>*/}
-            {/*            </View>*/}
-            {/*        </View>*/}
-            {/*    </TriggeringView>*/}
-
-            {/*    <View style={[styles.section, styles.sectionLarge]}>*/}
-            {/*        <Text style={styles.sectionContent}>{data.description}</Text>*/}
-            {/*    </View>*/}
-
-            {/*    <View style={styles.section}>*/}
-            {/*        <View style={styles.categories}>*/}
-            {/*            {data.categories.map((category, index) => (*/}
-            {/*                <View style={styles.categoryContainer} key={index}>*/}
-            {/*                    <FontAwesome name="tag" size={16} color="#fff"/>*/}
-            {/*                    <Text style={styles.category}>{category}</Text>*/}
-            {/*                </View>*/}
-            {/*            ))}*/}
-            {/*        </View>*/}
-            {/*    </View>*/}
-
-
-            {/*</HeaderImageScrollView>*/}
-
             <TopNavigation
                 title={itemData.title}
                 leftControl={renderBackAction()}
