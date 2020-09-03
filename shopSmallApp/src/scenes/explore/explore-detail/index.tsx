@@ -7,7 +7,7 @@ import {
     ScrollView,
     View,
 } from 'react-native';
-import { Button, Card, Icon, List, StyleService, Text, useStyleSheet } from '@ui-kitten/components';
+import {Button, Card, Icon, Input, List, StyleService, Text, TextProps, useStyleSheet} from '@ui-kitten/components';
 import { ImageOverlay } from './extra/image-overlay.component';
 import {Product, ProductOption, ProductPrice} from './extra/contentTypes';
 import MapView, {Marker, PROVIDER_GOOGLE} from "react-native-maps";
@@ -76,6 +76,13 @@ export default (props): React.ReactElement => {
                 {product.options.map(renderOptionItem)}
             </View>
         </View>
+    );
+
+    const [inputComment, setInputComment] = React.useState<string>();
+    const renderCommentInputLabel = (props: TextProps): React.ReactElement => (
+        <Text {...props} style={[props.style, styles.commentInputLabel]}>
+            Comments
+        </Text>
     );
 
     const pricePerPerson: ProductPrice = new ProductPrice(props.data.price, '£', 'person');
@@ -194,6 +201,15 @@ export default (props): React.ReactElement => {
                     />
                 </MapView>
             </View>
+
+            <Input
+                style={styles.commentInput}
+                label={renderCommentInputLabel}
+                placeholder='Write your comment'
+                value={inputComment}
+                onChangeText={setInputComment}
+            />
+
         </ScrollView>
     );
 };
@@ -289,5 +305,19 @@ const themedStyles = StyleService.create({
         width: '100%',
         alignSelf: 'center',
         borderRadius: 8,
+    },
+    commentInputLabel: {
+        fontSize: 16,
+        marginBottom: 8,
+        color: ""
+    },
+    commentInput: {
+        marginHorizontal: 16,
+        marginTop: 24,
+        marginBottom: 20,
+    },
+    commentList: {
+        flex: 1,
+        backgroundColor: 'transparent',
     },
 });

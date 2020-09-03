@@ -12,7 +12,15 @@ import {
 import Share from "react-native-share";
 
 import {SafeAreaLayout} from '../../components/safe-area-layout.component';
-import {Icon, MenuItem, OverflowMenu, TopNavigation, TopNavigationAction} from "@ui-kitten/components";
+import {
+    Icon,
+    Input,
+    MenuItem,
+    OverflowMenu,
+    TextProps,
+    TopNavigation,
+    TopNavigationAction
+} from "@ui-kitten/components";
 import ContentView from "./explore-detail";
 
 const MIN_HEIGHT = Platform.OS === 'ios' ? 90 : 55;
@@ -22,7 +30,6 @@ const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
 
     const itemData = route.params.markerData;
     const [visible, setVisible] = React.useState(false);
-    const [selectedTitle, setSelectedTitle] = React.useState('No items selected');
 
     const BackIcon = (props) => (
         <Icon name='arrow-ios-back' {...props} />

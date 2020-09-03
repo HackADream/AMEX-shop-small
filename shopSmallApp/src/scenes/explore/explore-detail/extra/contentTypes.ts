@@ -77,3 +77,84 @@ export class ProductOption {
         return new ProductOption('car', 'Free Parking');
     }
 }
+
+export class Profile {
+
+    constructor(readonly firstName: string,
+                readonly lastName: string,
+                readonly photo: ImageSourcePropType) {
+    }
+
+    get fullName(): string {
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+    static markVolter(): Profile {
+        return new Profile(
+            'Mark',
+            'Volter',
+            require('../assets/image-profile.jpg'),
+        );
+    }
+
+    static hubertFranck(): Profile {
+        return new Profile(
+            'Hubert',
+            'Franck',
+            require('../assets/image-profile.jpg'),
+        );
+    }
+}
+
+export class Like {
+
+    constructor(readonly author: Profile) {
+
+    }
+
+    static byMarkVolter(): Like {
+        return new Like(
+            Profile.markVolter(),
+        );
+    }
+
+    static byHubertFranck(): Like {
+        return new Like(
+            Profile.hubertFranck(),
+        );
+    }
+}
+
+export class Comment {
+
+    constructor(readonly text: string,
+                readonly date: string,
+                readonly author: Profile,
+                readonly comments: Comment[],
+                readonly likes: Like[]) {
+    }
+
+    static byHubertFranck(): Comment {
+        return new Comment(
+            'The chair has a good quality!',
+            'Today 11:10 am',
+            Profile.hubertFranck(),
+            [
+                Comment.byMarkVolter(),
+            ],
+            [
+                Like.byMarkVolter(),
+            ],
+        );
+    }
+
+    static byMarkVolter(): Comment {
+        return new Comment(
+            'Yes! I agree with you',
+            'Today 11:10 am',
+            Profile.markVolter(),
+            [],
+            [],
+        );
+    }
+}
