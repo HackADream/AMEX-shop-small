@@ -6,7 +6,7 @@ import {
     StyleSheet,
     Dimensions,
     StatusBar,
-    Platform,
+    Platform, Linking,
 } from 'react-native';
 import HeaderImageScrollView, {
     TriggeringView,
@@ -59,16 +59,22 @@ const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
         >
             <MenuItem title='Navigation' onPress={onNavigationPress}/>
             <MenuItem title='Share' onPress={onSharePress}/>
+            <MenuItem title='Save' onPress={onSavePress}/>
         </OverflowMenu>
     );
 
-    const onNavigationPress = ({ index }) => {
-        setSelectedTitle('Navigation');
+    const onNavigationPress = () => {
+        setVisible(false);
+        const url = "google.navigation:q=" + itemData.coordinate.latitude+ "+" + itemData.coordinate.longitude;
+        Linking.openURL(url);
+    };
+
+    const onSharePress = () => {
+        setSelectedTitle('Share');
         setVisible(false);
     };
 
-    const onSharePress = ({ index }) => {
-        setSelectedTitle('Share');
+    const onSavePress = () => {
         setVisible(false);
     };
 
