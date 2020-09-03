@@ -12,6 +12,7 @@ import { ImageOverlay } from './extra/image-overlay.component';
 import {Product, ProductOption, ProductPrice} from './extra/contentTypes';
 import MapView, {Marker, PROVIDER_GOOGLE} from "react-native-maps";
 import Swiper from 'react-native-swiper';
+import {OfferBanner} from "./extra/offer-banner.component";
 
 const product: Product = Product.centralParkApartment();
 
@@ -132,15 +133,7 @@ export default (props): React.ReactElement => {
                 <Swiper
                     autoplay
                     horizontal={false}
-                    height={200}
                     activeDotColor="#FF6347">
-                    <View style={styles.slide}>
-                        <Image
-                            source={require('../../../assets/images/banners/food-banner1.jpg')}
-                            resizeMode="cover"
-                            style={styles.sliderImage}
-                        />
-                    </View>
                     <View style={styles.slide}>
                         <Image
                             source={require('../../../assets/images/banners/food-banner2.jpg')}
@@ -148,6 +141,9 @@ export default (props): React.ReactElement => {
                             style={styles.sliderImage}
                         />
                     </View>
+                    <OfferBanner
+                        image={"../assets/food-banner7.jpeg"}
+                    />
                     <View style={styles.slide}>
                         <Image
                             source={require('../../../assets/images/banners/food-banner3.jpg')}
@@ -262,13 +258,20 @@ const themedStyles = StyleService.create({
         marginHorizontal: 20,
         marginVertical: 10
     },
+    sliderContainer: {
+        height: 100,
+        marginTop: 10,
+        justifyContent: 'center',
+        alignSelf: 'center',
+        borderRadius: 8,
+        marginVertical: 10,
+        marginHorizontal: 15,
+    },
     slide: {
         flex: 1,
         justifyContent: 'center',
         backgroundColor: 'transparent',
         borderRadius: 8,
-        marginHorizontal: 20,
-        marginVertical: 10　
     },
     sliderImage: {
         height: '100%',
