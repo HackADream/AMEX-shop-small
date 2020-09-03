@@ -2992,3 +2992,4 @@ int styleable ViewStubCompat_android_id 0
 int styleable ViewStubCompat_android_layout 1
 int styleable ViewStubCompat_android_inflatedId 2
 int xml rn_dev_preferences 0x7f110000
+int xml share_download_paths 0x7f110001
