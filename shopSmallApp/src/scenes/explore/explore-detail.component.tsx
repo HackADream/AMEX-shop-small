@@ -66,6 +66,14 @@ const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
             style={styles.container}
             insets='top'
         >
+            <OverflowMenu
+                anchor={renderMoreAction}
+                visible={visible}
+                onBackdropPress={() => setVisible(false)}
+            >
+                <MenuItem title='Navigation' onPress={onNavigationPress}/>
+                <MenuItem title='Share' onPress={onSharePress}/>
+            </OverflowMenu>
             <TopNavigation
                 title={itemData.title}
                 accessoryLeft={renderBackAction}
