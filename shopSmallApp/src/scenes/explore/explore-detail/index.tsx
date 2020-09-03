@@ -20,6 +20,7 @@ export default (props): React.ReactElement => {
     const styles = useStyleSheet(themedStyles);
 
     const onBookButtonPress = (): void => {
+        Linking.openURL(`tel:${props.data.phoneNumber}`)
     };
 
     const renderImageItem = (info: ListRenderItemInfo<ImageSourcePropType>): React.ReactElement => (

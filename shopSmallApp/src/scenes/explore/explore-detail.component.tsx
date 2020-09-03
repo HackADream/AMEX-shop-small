@@ -8,9 +8,8 @@ import {
     StatusBar,
     Platform, Linking,
 } from 'react-native';
-import HeaderImageScrollView, {
-    TriggeringView,
-} from 'react-native-image-header-scroll-view';
+
+import Share from "react-native-share";
 
 import {SafeAreaLayout} from '../../components/safe-area-layout.component';
 import {Icon, MenuItem, OverflowMenu, TopNavigation, TopNavigationAction} from "@ui-kitten/components";
@@ -69,8 +68,23 @@ const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
         Linking.openURL(url);
     };
 
+
+    const myCustomShare = async() => {
+        const shareOptions = {
+            message: 'Our Shop Small Partner: \"' + itemData.title + "\" sincerely welcomed you to visit at " + itemData.postcode + ". There are so many offers for you to explore!",
+        };
+
+        try {
+            const ShareResponse = await Share.open(shareOptions);
+            console.log(JSON.stringify(ShareResponse));
+        } catch(error) {
+            console.log('Error => ', error);
+        }
+    };
+
+
     const onSharePress = () => {
-        setSelectedTitle('Share');
+        myCustomShare();
         setVisible(false);
     };
 
