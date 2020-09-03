@@ -51,6 +51,17 @@ const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
         />
     );
 
+    const renderOverflowMenu = (): React.ReactElement => (
+        <OverflowMenu
+            anchor={renderMoreAction}
+            visible={visible}
+            onBackdropPress={() => setVisible(false)}
+        >
+            <MenuItem title='Navigation' onPress={onNavigationPress}/>
+            <MenuItem title='Share' onPress={onSharePress}/>
+        </OverflowMenu>
+    );
+
     const onNavigationPress = ({ index }) => {
         setSelectedTitle('Navigation');
         setVisible(false);
@@ -66,18 +77,10 @@ const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
             style={styles.container}
             insets='top'
         >
-            <OverflowMenu
-                anchor={renderMoreAction}
-                visible={visible}
-                onBackdropPress={() => setVisible(false)}
-            >
-                <MenuItem title='Navigation' onPress={onNavigationPress}/>
-                <MenuItem title='Share' onPress={onSharePress}/>
-            </OverflowMenu>
             <TopNavigation
                 title={itemData.title}
                 accessoryLeft={renderBackAction}
-                accessoryRight={renderMoreAction}
+                accessoryRight={renderOverflowMenu}
             />
 
             <ContentView data={itemData}/>
