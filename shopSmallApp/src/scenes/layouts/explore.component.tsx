@@ -227,7 +227,7 @@ export const ExploreScreen = (props): React.ReactElement => {
                             <Text numberOfLines={1} style={styles.cardDescription}>{marker.description}</Text>
                             <View style={styles.button}>
                                 <TouchableOpacity
-                                    onPress={() => {}}
+                                    onPress={() => {props.navigation.navigate("CardItemDetail", {markerData: marker})}}
                                     style={[styles.signIn, {
                                         borderColor: '#FF6347',
                                         borderWidth: 1
@@ -235,7 +235,7 @@ export const ExploreScreen = (props): React.ReactElement => {
                                 >
                                     <Text style={[styles.textSign, {
                                         color: '#FF6347'
-                                    }]}>Order Now</Text>
+                                    }]}>Detail</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>
