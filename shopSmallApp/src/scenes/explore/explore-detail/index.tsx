@@ -2,7 +2,7 @@ import React from 'react';
 import {
     Image,
     ImageSourcePropType,
-    ImageStyle,
+    ImageStyle, Linking,
     ListRenderItemInfo,
     ScrollView,
     View,
@@ -20,7 +20,8 @@ export default (props): React.ReactElement => {
     const styles = useStyleSheet(themedStyles);
 
     const onBookButtonPress = (): void => {
-
+        const url = "google.navigation:q=" +props.data.coordinate.latitude+ "+" + props.data.coordinate.longitude;
+        Linking.openURL(url)
     };
 
     const renderImageItem = (info: ListRenderItemInfo<ImageSourcePropType>): React.ReactElement => (
