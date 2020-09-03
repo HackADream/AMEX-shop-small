@@ -41,7 +41,7 @@ export default (props): React.ReactElement => {
             style={styles.optionItem}
             appearance='ghost'
             size='small'
-            icon={(style: ImageStyle) => renderOptionItemIcon(style, option.icon)}>
+            accessoryLeft={(style: ImageStyle) => renderOptionItemIcon(style, option.icon)}>
             {option.title}
         </Button>
     );
@@ -57,16 +57,20 @@ export default (props): React.ReactElement => {
     );
 
     const renderBookingFooter = (): React.ReactElement => (
-        <View>
+        <View {...props}>
             <Text
-                category='s1'>
+                category='s1'
+                style={styles.footerText}
+            >
                 Categories
             </Text>
             <View style={styles.detailsList}>
                 {props.data.categories.map(renderDetailItem)}
             </View>
             <Text
-                category='s1'>
+                category='s1'
+                style={styles.footerText}
+            >
                 Facilities
             </Text>
             <View style={styles.optionList}>
@@ -220,9 +224,13 @@ const themedStyles = StyleService.create({
         bottom: 24,
         right: 24,
     },
+    footerText: {
+        marginHorizontal:20,
+        marginTop: 8
+    },
     detailsList: {
         flexDirection: 'row',
-        marginHorizontal: -4,
+        marginHorizontal: 20,
         marginVertical: 8,
     },
     detailItem: {
@@ -231,8 +239,8 @@ const themedStyles = StyleService.create({
     },
     optionList: {
         flexDirection: 'row',
-        marginHorizontal: -4,
-        marginVertical: 8,
+        marginHorizontal: 20,
+        marginVertical: 4,
     },
     optionItem: {
         marginHorizontal: 4,

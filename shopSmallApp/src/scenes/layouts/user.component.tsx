@@ -14,9 +14,9 @@ import {TopNavigation} from "@ui-kitten/components";
 
 export const UserScreen = (props): React.ReactElement => {
     return (
-        <SafeAreaLayout
+        <View
             style={styles.safeArea}
-            insets='top'>
+        >
 
             <View style={styles.container}>
             <View style={styles.userInfoSection}>
@@ -94,12 +94,13 @@ export const UserScreen = (props): React.ReactElement => {
             </View>
             </View>
 
-        </SafeAreaLayout>
+        </View>
     );
 };
 
 const styles = StyleSheet.create({
     safeArea: {
+        backgroundColor: "#ffffffff",
         flex: 1,
     },
     container: {

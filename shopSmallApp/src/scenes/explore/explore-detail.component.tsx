@@ -68,8 +68,8 @@ const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
         >
             <TopNavigation
                 title={itemData.title}
-                leftControl={renderBackAction()}
-                rightControls={[renderMoreAction()]}
+                accessoryLeft={renderBackAction}
+                accessoryRight={renderMoreAction}
             />
 
             <ContentView data={itemData}/>

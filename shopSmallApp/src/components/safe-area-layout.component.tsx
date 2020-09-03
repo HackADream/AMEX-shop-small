@@ -29,7 +29,8 @@ export interface SafeAreaLayoutProps extends ViewProps, StyledComponentProps {
     children?: React.ReactNode;
 }
 
-export class SafeAreaLayoutComponent extends React.Component<SafeAreaLayoutProps> {
+@styled("SafeAreaLayout")
+export class SafeAreaLayout extends React.Component<SafeAreaLayoutProps> {
 
     static styledComponentName: string = 'SafeAreaLayout';
 
@@ -48,15 +49,13 @@ export class SafeAreaLayoutComponent extends React.Component<SafeAreaLayoutProps
     };
 
     private renderComponent = (safeAreaInsets: EdgeInsets): React.ReactElement<ViewProps> => {
-        const { style, insets, themedStyle, ...viewProps } = this.props;
+        const { style, insets, eva, ...viewProps } = this.props;
 
         return (
             <View
                 {...viewProps}
-                style={[this.createInsets(insets, safeAreaInsets, themedStyle), style]}
+                style={[this.createInsets(insets, safeAreaInsets, eva), style]}
             />
         );
     };
 }
-
-export const SafeAreaLayout = styled(SafeAreaLayoutComponent);
