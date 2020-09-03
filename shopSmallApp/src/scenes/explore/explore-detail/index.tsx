@@ -1,17 +1,30 @@
 import React from 'react';
 import {
-    Image,
+    Image, ImageProps,
     ImageSourcePropType,
     ImageStyle, Linking,
     ListRenderItemInfo,
     ScrollView,
-    View,
+    View, ViewProps,
 } from 'react-native';
-import {Button, Card, Icon, Input, List, StyleService, Text, TextProps, useStyleSheet} from '@ui-kitten/components';
+import {
+    Avatar,
+    Button,
+    Card,
+    Icon,
+    IconElement,
+    Input,
+    List,
+    StyleService,
+    Text,
+    TextProps,
+    useStyleSheet
+} from '@ui-kitten/components';
 import { ImageOverlay } from './extra/image-overlay.component';
-import {Product, ProductOption, ProductPrice} from './extra/contentTypes';
+import {Comment, Like, Product, ProductOption, ProductPrice, Profile} from './extra/contentTypes';
 import MapView, {Marker, PROVIDER_GOOGLE} from "react-native-maps";
 import Swiper from 'react-native-swiper';
+import StarRating from "../../../components/star-rating.component";
 
 const product: Product = Product.centralParkApartment();
 
@@ -84,6 +97,56 @@ export default (props): React.ReactElement => {
             Comments
         </Text>
     );
+
+    const HeartIcon = (props: Partial<ImageProps>): IconElement => (
+        <Icon {...props} name='heart'/>
+    );
+
+    const MessageCircleIcon = (props: Partial<ImageProps>): IconElement => (
+        <Icon {...props} name='message-circle-outline'/>
+    );
+
+    const MoreHorizontalIcon = (props: Partial<ImageProps>): IconElement => (
+        <Icon {...props} name='more-horizontal'/>
+    );
+
+    const renderCommentHeader = (props: ViewProps, comment: Comment): React.ReactElement => (
+        <View style={[props.style, styles.commentHeader]}>
+            <Avatar source={comment.author.photo}/>
+            <View style={styles.commentAuthorContainer}>
+                <Text category='s2'>{comment.author.fullName}</Text>
+                <Text appearance='hint' category='c1'>{comment.date}</Text>
+                <StarRating ratings={4} reviews={1} />
+            </View>
+            <Button
+                style={styles.iconButton}
+                appearance='ghost'
+                status='basic'
+                accessoryLeft={MoreHorizontalIcon}
+            />
+        </View>
+    );
+
+    const byMarkVolter: Comment = new Comment(
+            'Yes! I agree with you',
+            'Today 11:10 am',
+            Profile.markVolter(),
+            [],
+            [],
+        );
+
+    const byHubertFranck: Comment = new Comment(
+        'The chair has a good quality!',
+        'Today 11:10 am',
+        Profile.hubertFranck(),
+        [
+            byMarkVolter,
+        ],
+        [
+            Like.byMarkVolter(),
+        ],
+    );
+
 
     const pricePerPerson: ProductPrice = new ProductPrice(props.data.price, '£', 'person');
 
@@ -210,6 +273,28 @@ export default (props): React.ReactElement => {
                 onChangeText={setInputComment}
             />
 
+            <Card
+                style={styles.commentItem}
+                header={props => renderCommentHeader(props, byHubertFranck)}>
+                <Text>{"Food there is delicious!"}</Text>
+                <View style={styles.commentReactionsContainer}>
+                    <Button
+                        style={styles.iconButton}
+                        appearance='ghost'
+                        status='basic'
+                        accessoryLeft={MessageCircleIcon}>
+                        {1}
+                    </Button>
+                    <Button
+                        style={styles.iconButton}
+                        appearance='ghost'
+                        status='danger'
+                        accessoryLeft={HeartIcon}>
+                        {1}
+                    </Button>
+                </View>
+            </Card>
+
         </ScrollView>
     );
 };
@@ -319,5 +404,26 @@ const themedStyles = StyleService.create({
     commentList: {
         flex: 1,
         backgroundColor: 'transparent',
+    },
+    commentItem: {
+        marginVertical: 8,
+        marginHorizontal: 16,
+    },
+    commentHeader: {
+        flexDirection: 'row',
+        padding: 16,
+    },
+    commentAuthorContainer: {
+        flex: 1,
+        marginHorizontal: 16,
+    },
+    commentReactionsContainer: {
+        flexDirection: 'row',
+        marginTop: 8,
+        marginHorizontal: -8,
+        marginVertical: -8,
+    },
+    iconButton: {
+        paddingHorizontal: 0,
     },
 });
