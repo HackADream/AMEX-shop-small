@@ -64,21 +64,21 @@ transaction history of the user and analyze the user preferences based on the hi
 and produce the recommendation results on any internal API requests such as:
 ```json
     {
-        id: '1',
-        coordinate: {
-            latitude: 51.531164,
-            longitude: -0.120207,
+        "id": "1",
+        "coordinate": {
+            "latitude": 51.531164,
+            "longitude": -0.120207,
         },
-        title: 'Amazing Food Place',
-        description: "this is the discription",
-        image: images[0].image,
-        rating: 4,
-        reviews: 99,
-        categories: ['Restaurant', 'Hotel', 'Dineout'],
-        price: 15,
-        postcode: "N1 9JL",
-        phoneNumber: "07410332392"
-    },
+       "title": "Amazing Food Place",
+        "description": "this is the description",
+        "image": "images/1",
+        "rating": 4,
+        "reviews": 99,
+        "categories": ["Restaurant", "Hotel", "Dineout"],
+        "price": 15,
+        "postcode": "N1 9JL",
+        "phoneNumber": "07410332392"
+    }
 ```
 
 The system overview should as follow: 
