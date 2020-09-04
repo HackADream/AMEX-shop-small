@@ -4,11 +4,11 @@ This is the proof of concept how the recommendation works
 
 ## Content
 * [Demo](#Demo)
-* [Aim and pain points](#Aim and pain points)
-* [Proposed solution](#Proposed solution)
-    * [Recommendation algorithms](#Recommendation algorithms)
-    * [React Native mobile app example](#React Native mobile app example)
-    * [Other infrastructures in the future](#Other infrastructures in the future)
+* [Aim and pain points](#Aim&#32;and&#32;pain&#32;points)
+* [Proposed solution](#Proposed&#32;solution)
+    * [Recommendation System](#Recommendation&#32;System)
+    * [React Native mobile app example](#React&#32;Native&#32;mobile&#32;app&#32;example)
+    * [Other infrastructures in the future](#Other&#32;infrastructures&#32;in&#32;the&#32;future)
 * [Conclusion](#Conclusion)
 
 ## Demo
