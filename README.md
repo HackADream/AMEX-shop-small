@@ -12,7 +12,18 @@ This is the proof of concept how the recommendation works
 * [Conclusion](#Conclusion)
 
 ## Demo
-### Recommendation Algorithm
+### Recommendation System
+You should have Jupyter notebook installed. 
+Go to recommendation dir and open Jupyter notebook:
+```
+cd recommendation
+jupyter notebook
+```
+
+Run the code in Data Preperations.ipynb to generate random data. 
+You should get two new files, "list_items.csv" and "user_rating.csv" respectively in the same dir.
+Run the code in AMEX-Recommendation.ipynb to create neural network model, predict user preferences and get recommendation list.
+
 
 ### Mobile App
 You should have **Android Studio** installed on your device and `yarn` available on your running environment
@@ -53,27 +64,43 @@ transaction history of the user and analyze the user preferences based on the hi
 and produce the recommendation results on any internal API requests such as:
 ```json
     {
-        "id": "1",
-        "coordinate": {
-            "latitude": 51.531164,
-            "longitude": -0.120207,
+        id: '1',
+        coordinate: {
+            latitude: 51.531164,
+            longitude: -0.120207,
         },
-        "title": "Amazing Food Place",
-        "description": "this is the discription",
-        "image": "imagepath",
-        "rating": 4,
-        "reviews": 99,
-        "categories": ["Restaurant", "Hotel", "Dineout"],
-        "price": 15,
-        "postcode": "N1 9JL",
-       "phoneNumber": "07410332392"
-    }
+        title: 'Amazing Food Place',
+        description: "this is the discription",
+        image: images[0].image,
+        rating: 4,
+        reviews: 99,
+        categories: ['Restaurant', 'Hotel', 'Dineout'],
+        price: 15,
+        postcode: "N1 9JL",
+        phoneNumber: "07410332392"
+    },
 ```
 
 The system overview should as follow: 
 ![flow](./assets/flowchart.jpg)
 
-### Recommendation algorithms
+### Recommendation System
+
+Our recommendation system ensures the more tailored products will be recommended to the user, based on : 
+
+* Ratings of other users who have the similar taste as the user 
+
+* Geolocation of items 
+
+* User’s spending capability 
+
+Our recommendation system uses collaborative filtering, which is generally used in successful recommendation system nowadays. In simple term, the approach checks if a user has some similar preferences and dislikes of certain items with other user. If it does, then it assumes that the user will have similar opinion on other items with the other user. Through this approach, the system can predict the opinions of user on the items that user hasn’t bought.  
+
+Given that we have the data of users, their ratings on the items they bought (rating depends on their ratings on feedback section or amount of purchases) and the geolocation of the items, our recommendation system will predict the preferences level of users on each of the items. 
+
+We are using Pytorch to build the deep learning neural network model, which helps us infer the similarities of preferences between users and predict the preferences of all items for every users. The input of our existing data will be modified to replace strings with numbers, so it can be read easily by the neural network model. 
+
+The output of the recommendation system is a list of items, where the items with higher user rating will come before the items with lower ratings. This list will be utilised in the recommendation section and search list of the app, where the items that user prefer the most will appear first. 
 
 ### React Native mobile app example
 
