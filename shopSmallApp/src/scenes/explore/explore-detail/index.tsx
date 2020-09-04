@@ -1,17 +1,30 @@
 import React from 'react';
 import {
-    Image,
+    Image, ImageProps,
     ImageSourcePropType,
-    ImageStyle,
+    ImageStyle, Linking,
     ListRenderItemInfo,
     ScrollView,
-    View,
+    View, ViewProps,
 } from 'react-native';
-import { Button, Card, Icon, List, StyleService, Text, useStyleSheet } from '@ui-kitten/components';
+import {
+    Avatar,
+    Button,
+    Card,
+    Icon,
+    IconElement,
+    Input,
+    List,
+    StyleService,
+    Text,
+    TextProps,
+    useStyleSheet
+} from '@ui-kitten/components';
 import { ImageOverlay } from './extra/image-overlay.component';
-import {Product, ProductOption, ProductPrice} from './extra/contentTypes';
+import {Comment, Like, Product, ProductOption, ProductPrice, Profile} from './extra/contentTypes';
 import MapView, {Marker, PROVIDER_GOOGLE} from "react-native-maps";
 import Swiper from 'react-native-swiper';
+import StarRating from "../../../components/star-rating.component";
 
 const product: Product = Product.centralParkApartment();
 
@@ -20,7 +33,7 @@ export default (props): React.ReactElement => {
     const styles = useStyleSheet(themedStyles);
 
     const onBookButtonPress = (): void => {
-
+        Linking.openURL(`tel:${props.data.phoneNumber}`)
     };
 
     const renderImageItem = (info: ListRenderItemInfo<ImageSourcePropType>): React.ReactElement => (
@@ -40,7 +53,7 @@ export default (props): React.ReactElement => {
             style={styles.optionItem}
             appearance='ghost'
             size='small'
-            icon={(style: ImageStyle) => renderOptionItemIcon(style, option.icon)}>
+            accessoryLeft={(style: ImageStyle) => renderOptionItemIcon(style, option.icon)}>
             {option.title}
         </Button>
     );
@@ -56,16 +69,20 @@ export default (props): React.ReactElement => {
     );
 
     const renderBookingFooter = (): React.ReactElement => (
-        <View>
+        <View {...props}>
             <Text
-                category='s1'>
+                category='s1'
+                style={styles.footerText}
+            >
                 Categories
             </Text>
             <View style={styles.detailsList}>
                 {props.data.categories.map(renderDetailItem)}
             </View>
             <Text
-                category='s1'>
+                category='s1'
+                style={styles.footerText}
+            >
                 Facilities
             </Text>
             <View style={styles.optionList}>
@@ -73,6 +90,63 @@ export default (props): React.ReactElement => {
             </View>
         </View>
     );
+
+    const [inputComment, setInputComment] = React.useState<string>();
+    const renderCommentInputLabel = (props: TextProps): React.ReactElement => (
+        <Text {...props} style={[props.style, styles.commentInputLabel]}>
+            Comments
+        </Text>
+    );
+
+    const HeartIcon = (props: Partial<ImageProps>): IconElement => (
+        <Icon {...props} name='heart'/>
+    );
+
+    const MessageCircleIcon = (props: Partial<ImageProps>): IconElement => (
+        <Icon {...props} name='message-circle-outline'/>
+    );
+
+    const MoreHorizontalIcon = (props: Partial<ImageProps>): IconElement => (
+        <Icon {...props} name='more-horizontal'/>
+    );
+
+    const renderCommentHeader = (props: ViewProps, comment: Comment): React.ReactElement => (
+        <View style={[props.style, styles.commentHeader]}>
+            <Avatar source={comment.author.photo}/>
+            <View style={styles.commentAuthorContainer}>
+                <Text category='s2'>{comment.author.fullName}</Text>
+                <Text appearance='hint' category='c1'>{comment.date}</Text>
+                <StarRating ratings={4} reviews={1} />
+            </View>
+            <Button
+                style={styles.iconButton}
+                appearance='ghost'
+                status='basic'
+                accessoryLeft={MoreHorizontalIcon}
+            />
+        </View>
+    );
+
+    const byMarkVolter: Comment = new Comment(
+            'Yes! I agree with you',
+            'Today 11:10 am',
+            Profile.markVolter(),
+            [],
+            [],
+        );
+
+    const byHubertFranck: Comment = new Comment(
+        'The chair has a good quality!',
+        'Today 11:10 am',
+        Profile.hubertFranck(),
+        [
+            byMarkVolter,
+        ],
+        [
+            Like.byMarkVolter(),
+        ],
+    );
+
 
     const pricePerPerson: ProductPrice = new ProductPrice(props.data.price, '£', 'person');
 
@@ -190,6 +264,37 @@ export default (props): React.ReactElement => {
                     />
                 </MapView>
             </View>
+
+            <Input
+                style={styles.commentInput}
+                label={renderCommentInputLabel}
+                placeholder='Write your comment'
+                value={inputComment}
+                onChangeText={setInputComment}
+            />
+
+            <Card
+                style={styles.commentItem}
+                header={props => renderCommentHeader(props, byHubertFranck)}>
+                <Text>{"Food there is delicious!"}</Text>
+                <View style={styles.commentReactionsContainer}>
+                    <Button
+                        style={styles.iconButton}
+                        appearance='ghost'
+                        status='basic'
+                        accessoryLeft={MessageCircleIcon}>
+                        {1}
+                    </Button>
+                    <Button
+                        style={styles.iconButton}
+                        appearance='ghost'
+                        status='danger'
+                        accessoryLeft={HeartIcon}>
+                        {1}
+                    </Button>
+                </View>
+            </Card>
+
         </ScrollView>
     );
 };
@@ -219,9 +324,13 @@ const themedStyles = StyleService.create({
         bottom: 24,
         right: 24,
     },
+    footerText: {
+        marginHorizontal:20,
+        marginTop: 8
+    },
     detailsList: {
         flexDirection: 'row',
-        marginHorizontal: -4,
+        marginHorizontal: 20,
         marginVertical: 8,
     },
     detailItem: {
@@ -230,8 +339,8 @@ const themedStyles = StyleService.create({
     },
     optionList: {
         flexDirection: 'row',
-        marginHorizontal: -4,
-        marginVertical: 8,
+        marginHorizontal: 20,
+        marginVertical: 4,
     },
     optionItem: {
         marginHorizontal: 4,
@@ -281,5 +390,40 @@ const themedStyles = StyleService.create({
         width: '100%',
         alignSelf: 'center',
         borderRadius: 8,
+    },
+    commentInputLabel: {
+        fontSize: 16,
+        marginBottom: 8,
+        color: ""
+    },
+    commentInput: {
+        marginHorizontal: 16,
+        marginTop: 24,
+        marginBottom: 20,
+    },
+    commentList: {
+        flex: 1,
+        backgroundColor: 'transparent',
+    },
+    commentItem: {
+        marginVertical: 8,
+        marginHorizontal: 16,
+    },
+    commentHeader: {
+        flexDirection: 'row',
+        padding: 16,
+    },
+    commentAuthorContainer: {
+        flex: 1,
+        marginHorizontal: 16,
+    },
+    commentReactionsContainer: {
+        flexDirection: 'row',
+        marginTop: 8,
+        marginHorizontal: -8,
+        marginVertical: -8,
+    },
+    iconButton: {
+        paddingHorizontal: 0,
     },
 });

@@ -6,17 +6,21 @@ import {
     StyleSheet,
     Dimensions,
     StatusBar,
-    Platform,
+    Platform, Linking,
 } from 'react-native';
-import HeaderImageScrollView, {
-    TriggeringView,
-} from 'react-native-image-header-scroll-view';
+
+import Share from "react-native-share";
 
 import {SafeAreaLayout} from '../../components/safe-area-layout.component';
-import * as Animatable from 'react-native-animatable';
-import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import {Icon, TopNavigation, TopNavigationAction} from "@ui-kitten/components";
+import {
+    Icon,
+    Input,
+    MenuItem,
+    OverflowMenu,
+    TextProps,
+    TopNavigation,
+    TopNavigationAction
+} from "@ui-kitten/components";
 import ContentView from "./explore-detail";
 
 const MIN_HEIGHT = Platform.OS === 'ios' ? 90 : 55;
@@ -25,24 +29,18 @@ const MAX_HEIGHT = 350;
 const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
 
     const itemData = route.params.markerData;
-    const navTitleView = useRef(null);
-
-    const [bookmarked, setBookmarked] = React.useState<boolean>(false);
+    const [visible, setVisible] = React.useState(false);
 
     const BackIcon = (props) => (
         <Icon name='arrow-ios-back' {...props} />
     );
 
-    const BookmarkIcon = (props) => (
-        <Icon name='bookmark' {...props} />
+    const MoreIcon = (props) => (
+        <Icon name='more-vertical-outline' {...props} />
     );
 
-    const BookmarkOutlineIcon = (props) => (
-        <Icon name='bookmark-outline' {...props} />
-    );
-
-    const onBookmarkActionPress = (): void => {
-        setBookmarked(!bookmarked);
+    const onMoreActionPress = (): void => {
+        setVisible(true);
     };
 
     const renderBackAction = (): React.ReactElement => (
@@ -52,12 +50,54 @@ const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
         />
     );
 
-    const renderBookmarkAction = (): React.ReactElement => (
+    const renderMoreAction = (): React.ReactElement => (
         <TopNavigationAction
-            icon={bookmarked ? BookmarkIcon : BookmarkOutlineIcon}
-            onPress={onBookmarkActionPress}
+            icon={MoreIcon}
+            onPress={onMoreActionPress}
         />
     );
+
+    const renderOverflowMenu = (): React.ReactElement => (
+        <OverflowMenu
+            anchor={renderMoreAction}
+            visible={visible}
+            onBackdropPress={() => setVisible(false)}
+        >
+            <MenuItem title='Navigation' onPress={onNavigationPress}/>
+            <MenuItem title='Share' onPress={onSharePress}/>
+            <MenuItem title='Save' onPress={onSavePress}/>
+        </OverflowMenu>
+    );
+
+    const onNavigationPress = () => {
+        setVisible(false);
+        const url = "google.navigation:q=" + itemData.coordinate.latitude+ "+" + itemData.coordinate.longitude;
+        Linking.openURL(url);
+    };
+
+
+    const myCustomShare = async() => {
+        const shareOptions = {
+            message: 'Our Shop Small Partner: \"' + itemData.title + "\" sincerely welcomed you to visit at " + itemData.postcode + ". There are so many offers for you to explore!",
+        };
+
+        try {
+            const ShareResponse = await Share.open(shareOptions);
+            console.log(JSON.stringify(ShareResponse));
+        } catch(error) {
+            console.log('Error => ', error);
+        }
+    };
+
+
+    const onSharePress = () => {
+        myCustomShare();
+        setVisible(false);
+    };
+
+    const onSavePress = () => {
+        setVisible(false);
+    };
 
     return (
         <SafeAreaLayout
@@ -66,9 +106,10 @@ const CardItemDetailScreen = ({navigation, route}): React.ReactElement => {
         >
             <TopNavigation
                 title={itemData.title}
-                leftControl={renderBackAction()}
-                rightControls={[renderBookmarkAction()]}
+                accessoryLeft={renderBackAction}
+                accessoryRight={renderOverflowMenu}
             />
+
             <ContentView data={itemData}/>
         </SafeAreaLayout>
     );

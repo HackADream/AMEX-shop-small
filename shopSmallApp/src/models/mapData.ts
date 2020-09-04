@@ -22,6 +22,8 @@ export const markers = [
         reviews: 99,
         categories: ['Restaurant', 'Hotel', 'Dineout'],
         price: 15,
+        postcode: "N1 9JL",
+        phoneNumber: "0741033239"
     },
     {
         id: '2',
@@ -38,6 +40,8 @@ export const markers = [
         reviews: 102,
         categories: ['Restaurant', 'Fastfood Center', 'Snacks Corner'],
         price: 20,
+        postcode: "N1 9JL",
+        phoneNumber: "0741033239",
     },
     {
         id: '3',
@@ -54,6 +58,8 @@ export const markers = [
         reviews: 220,
         categories: ['Restaurant', 'Hotel', 'Dineout'],
         price: 40,
+        postcode: "N1 9JL",
+        phoneNumber: "0741033239",
     },
     {
         id: '4',
@@ -70,6 +76,8 @@ export const markers = [
         reviews: 48,
         categories: ['Restaurant', 'Fastfood Center', 'Snacks Corner'],
         price: 35,
+        postcode: "N1 9JL",
+        phoneNumber: "0741033239",
     },
     {
         id: '5',
@@ -86,6 +94,8 @@ export const markers = [
         reviews: 178,
         categories: ['Restaurant', 'Hotel', 'Dineout'],
         price: 10,
+        postcode: "N1 9JL",
+        phoneNumber: "0741033239",
     },
     {
         id: '6',
@@ -102,6 +112,8 @@ export const markers = [
         reviews: 99,
         categories: ['Restaurant', 'Hotel', 'Dineout'],
         price: 50,
+        postcode: "N1 9JL",
+        phoneNumber: "0741033239",
     },
     {
         id: '7',
@@ -118,6 +130,8 @@ export const markers = [
         reviews: 102,
         categories: ['Restaurant', 'Fastfood Center', 'Snacks Corner'],
         price: 75,
+        postcode: "N1 9JL",
+        phoneNumber: "0741033239",
     },
 ];
 
