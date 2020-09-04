@@ -3,6 +3,7 @@ The mobile app in react native for implement the personalized recommendation fee
 This is the proof of concept how the recommendation works
 
 ## Content
+* [Demo](#Demo)
 * [Aim and pain points](#Aim and pain points)
 * [Proposed solution](#Proposed solution)
     * [Recommendation algorithms](#Recommendation algorithms)
@@ -10,8 +11,41 @@ This is the proof of concept how the recommendation works
     * [Other infrastructures in the future](#Other infrastructures in the future)
 * [Conclusion](#Conclusion)
 
-## Aim and pain points
+## Demo
+### Recommendation Algorithm
 
+### Mobile App
+You should have **Android Studio** installed on your device and `yarn` available on your running environment
+For android studio, proper SDK should installed, instruction [here](https://reactnative.dev/docs/environment-setup)
+
+Run following commands:
+```shell
+yarn start
+yarn android
+```
+
+## Aim and pain points
+For the purpose of this work, we have delved
+                      into the comments and surprisingly found that nearly
+                      70% of the negative feedback refers to poor customer
+                      service and no personalization
+                      (i.e., being AMEX a multinational firm and with a large
+                      customer base, hence not dedicating enough time to
+                      improve user experiences).
+                      Furthermore, problems between the users and
+                      AMEX small businesses partners were also
+                      encountered among the comments.
+                      
+The new solution consists of improving Amex
+current mobile app by introducing hyperpersonalization, triggered by an AI-powered
+recommendation system, that collects data
+about each user’s purchase history and points redeemed in
+the past, identifying the user’s consumption preferences and
+spending capabilities. Then, the system automatically
+orders the offers at a more personal level, categorised by
+relevance to the users, presenting them according to their
+specific real-time location, predicted preferences and
+current financial status
 ## Proposed solution
 An with-trained recommendation system would be implemented at the backend, 
 this system will using the user token as the reference to securely access the 
@@ -63,3 +97,5 @@ The current solution only includes *AI component* and *Mobile APP*, the server A
 security. Also a robust connection between AI and central database should be designed and collect the proper data for AI to digest.
 
 ## Conclusion
+The solution demonstrates the possibility to achieve the plans in the business proposal i.e. intelligent recommendation system
+In the future, Two streams can be improved, specifically, improve the UI layout in the the standard AMEX UI and train the model to improve the accuracy.
