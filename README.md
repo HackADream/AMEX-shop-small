@@ -4,11 +4,11 @@ This is the proof of concept how the recommendation works
 
 ## Content
 * [Demo](#Demo)
-* [Aim and pain points](#Aim&#32;and&#32;pain&#32;points)
-* [Proposed solution](#Proposed&#32;solution)
-    * [Recommendation System](#Recommendation&#32;System)
-    * [React Native mobile app example](#React&#32;Native&#32;mobile&#32;app&#32;example)
-    * [Other infrastructures in the future](#Other&#32;infrastructures&#32;in&#32;the&#32;future)
+* [Aim and pain points](#Aim-and-pain-points)
+* [Proposed solution](#Proposed-solution)
+    * [Recommendation System](#Recommendation-system)
+    * [React Native mobile app example](#React-Native-mobile-app-example)
+    * [Other infrastructures in the future](#Other-infrastructures-in-the-future)
 * [Conclusion](#Conclusion)
 
 ## Demo
@@ -84,7 +84,7 @@ and produce the recommendation results on any internal API requests such as:
 The system overview should as follow: 
 ![flow](./assets/flowchart.jpg)
 
-### Recommendation System
+### Recommendation system
 
 Our recommendation system ensures the more tailored products will be recommended to the user, based on : 
 
