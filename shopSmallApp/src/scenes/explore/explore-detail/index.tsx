@@ -25,6 +25,7 @@ import {Comment, Like, Product, ProductOption, ProductPrice, Profile} from './ex
 import MapView, {Marker, PROVIDER_GOOGLE} from "react-native-maps";
 import Swiper from 'react-native-swiper';
 import StarRating from "../../../components/star-rating.component";
+import OfferCard from "../../../components/OfferCard/OfferCard";
 
 const product: Product = Product.centralParkApartment();
 
@@ -208,24 +209,42 @@ export default (props): React.ReactElement => {
                     horizontal={false}
                     activeDotColor="#FF6347">
                     <View style={styles.slide}>
-                        <Image
-                            source={require('../../../assets/images/banners/food-banner1.jpg')}
-                            resizeMode="cover"
-                            style={styles.sliderImage}
+                        <OfferCard
+                            title="Buy 1 Get 1"
+                            iconName="home"
+                            defaultTitle=""
+                            iconType="Entypo"
+                            defaultContent=""
+                            onPress={() => {}}
+                            topRightText="50/301"
+                            bottomRightText="30 km"
+                            content="Lorem ipsum dolor sit."
                         />
                     </View>
                     <View style={styles.slide}>
-                        <Image
-                            source={require('../../../assets/images/banners/food-banner2.jpg')}
-                            resizeMode="cover"
-                            style={styles.sliderImage}
+                        <OfferCard
+                            title="£10 Voucher"
+                            iconName="home"
+                            defaultTitle=""
+                            iconType="Entypo"
+                            defaultContent=""
+                            onPress={() => {}}
+                            topRightText="50/301"
+                            bottomRightText="30 km"
+                            content="Lorem ipsum dolor sit."
                         />
                     </View>
                     <View style={styles.slide}>
-                        <Image
-                            source={require('../../../assets/images/banners/food-banner3.jpg')}
-                            resizeMode="cover"
-                            style={styles.sliderImage}
+                        <OfferCard
+                            title="50% OFF"
+                            iconName="home"
+                            defaultTitle=""
+                            iconType="Entypo"
+                            defaultContent=""
+                            onPress={() => {}}
+                            topRightText="50/301"
+                            bottomRightText="30 km"
+                            content=""
                         />
                     </View>
                 </Swiper>
