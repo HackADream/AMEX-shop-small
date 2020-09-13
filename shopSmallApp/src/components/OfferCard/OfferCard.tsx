@@ -90,7 +90,7 @@ OfferCard.defaultProps = {
     borderRadius: 15,
     onPress: () => {},
     rightBottomText: "",
-    containerHeight: null,
+    containerHeight: 100,
     shadowStyle: _shadowStyle
 };
 

@@ -51,7 +51,7 @@ IconContainer.defaultProps = {
     iconName: "home",
     iconType: "Entypo",
     iconDisable: false,
-    iconBackgroundColor: "#fcdab5",
+    iconBackgroundColor: "#FF6347",
     iconColor: colors.theme.light.white
 };
 

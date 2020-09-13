@@ -206,45 +206,42 @@ export default (props): React.ReactElement => {
             <View style={styles.sliderContainer}>
                 <Swiper
                     autoplay
-                    horizontal={false}
+                    horizontal={true}
                     activeDotColor="#FF6347">
                     <View style={styles.slide}>
                         <OfferCard
                             title="Buy 1 Get 1"
-                            iconName="home"
+                            iconName="fast-food"
                             defaultTitle=""
-                            iconType="Entypo"
+                            iconType="Ionicons"
                             defaultContent=""
                             onPress={() => {}}
-                            topRightText="50/301"
-                            bottomRightText="30 km"
+                            bottomRightText="30 Remains"
                             content="Lorem ipsum dolor sit."
                         />
                     </View>
                     <View style={styles.slide}>
                         <OfferCard
                             title="£10 Voucher"
-                            iconName="home"
+                            iconName="beer"
                             defaultTitle=""
-                            iconType="Entypo"
+                            iconType="Ionicons"
                             defaultContent=""
                             onPress={() => {}}
-                            topRightText="50/301"
-                            bottomRightText="30 km"
+                            bottomRightText="50 Remains"
                             content="Lorem ipsum dolor sit."
                         />
                     </View>
                     <View style={styles.slide}>
                         <OfferCard
                             title="50% OFF"
-                            iconName="home"
+                            iconName="pizza"
                             defaultTitle=""
-                            iconType="Entypo"
+                            iconType="Ionicons"
                             defaultContent=""
                             onPress={() => {}}
-                            topRightText="50/301"
-                            bottomRightText="30 km"
-                            content=""
+                            bottomRightText="10 Remains"
+                            content="Lorem ipsum dolor sit."
                         />
                     </View>
                 </Swiper>

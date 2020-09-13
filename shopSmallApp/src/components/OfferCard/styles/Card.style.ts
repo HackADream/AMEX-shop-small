@@ -51,7 +51,7 @@ export function topRightTextStyle(trFontSize, trColor) {
 
 export default {
     contentContainer: {
-        margin:16
+        margin: 16
     },
     bottomRightContainer: {
         bottom: -5,
