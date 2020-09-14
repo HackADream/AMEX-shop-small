@@ -9,7 +9,7 @@ import {
     TouchableRipple,
 } from 'react-native-paper';
 
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon from "react-native-dynamic-vector-icons";
 
 export const UserScreen = (props): React.ReactElement => {
     return (
@@ -38,15 +38,15 @@ export const UserScreen = (props): React.ReactElement => {
 
                 <View style={styles.userInfoSection}>
                     <View style={styles.row}>
-                        <Icon name="map-marker-radius" color="#777777" size={20}/>
+                        <Icon name="map-marker-radius" type="MaterialCommunityIcons" color="#777777" size={20}/>
                         <Text style={{color: "#777777", marginLeft: 20}}>London, United Kindom</Text>
                     </View>
                     <View style={styles.row}>
-                        <Icon name="phone" color="#777777" size={20}/>
+                        <Icon name="phone" type="MaterialCommunityIcons" color="#777777" size={20}/>
                         <Text style={{color: "#777777", marginLeft: 20}}>+44-1234567890</Text>
                     </View>
                     <View style={styles.row}>
-                        <Icon name="email" color="#777777" size={20}/>
+                        <Icon name="email" type="MaterialCommunityIcons" color="#777777" size={20}/>
                         <Text style={{color: "#777777", marginLeft: 20}}>yangtao.ge.17@ucl.ac.uk</Text>
                     </View>
                 </View>
@@ -69,28 +69,29 @@ export const UserScreen = (props): React.ReactElement => {
                     <TouchableRipple onPress={() => {
                     }}>
                         <View style={styles.menuItem}>
-                            <Icon name="heart-outline" color="#FF6347" size={25}/>
+                            <Icon name="heart-outline" type="MaterialCommunityIcons" color="#FF6347" size={25}/>
                             <Text style={styles.menuItemText}>Favorites</Text>
                         </View>
                     </TouchableRipple>
                     <TouchableRipple onPress={() => {
+                        props.navigation.navigate("Wallet")
                     }}>
                         <View style={styles.menuItem}>
-                            <Icon name="credit-card" color="#FF6347" size={25}/>
-                            <Text style={styles.menuItemText}>History</Text>
+                            <Icon name="wallet-outline" type="Ionicons" color="#FF6347" size={25}/>
+                            <Text style={styles.menuItemText}>Wallet</Text>
                         </View>
                     </TouchableRipple>
                     <TouchableRipple onPress={() => {
                     }}>
                         <View style={styles.menuItem}>
-                            <Icon name="account-check-outline" color="#FF6347" size={25}/>
+                            <Icon name="account-check-outline" type="MaterialCommunityIcons" color="#FF6347" size={25}/>
                             <Text style={styles.menuItemText}>Support</Text>
                         </View>
                     </TouchableRipple>
                     <TouchableRipple onPress={() => {
                     }}>
                         <View style={styles.menuItem}>
-                            <Icon name="cog-outline" color="#FF6347" size={25}/>
+                            <Icon name="cog-outline" type="MaterialCommunityIcons" color="#FF6347" size={25}/>
                             <Text style={styles.menuItemText}>Settings</Text>
                         </View>
                     </TouchableRipple>
