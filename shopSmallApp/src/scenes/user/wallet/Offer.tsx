@@ -6,7 +6,7 @@ import {
     ScrollView,
     Animated,
     SafeAreaView,
-    Dimensions
+    Dimensions, PanResponder
 } from "react-native";
 
 const cardHeight = 250;
@@ -57,25 +57,45 @@ export default class OfferWallet extends React.Component {
         y: new Animated.Value(0)
     };
 
+    panResponder;
+
+    constructor(props) {
+        super(props);
+
+        const { y } = this.state;
+
+        this.panResponder = PanResponder.create({
+            onStartShouldSetPanResponder: () => true,
+            onMoveShouldSetPanResponder: () => true,
+            onPanResponderMove: (e, gestureState) => {
+                y.setValue(-1 * gestureState.dy);
+                console.log(y);
+            },
+            onPanResponderRelease: () => {
+                Animated.timing(y, {
+                    duration: 100,
+                    toValue: 0,
+                    useNativeDriver: true
+                }).start();
+            }
+        });
+    }
+
+
     render() {
         const { y } = this.state;
         return (
             <SafeAreaView style={styles.root}>
-                <View style={styles.container}>
+                <View style={styles.container} {...this.panResponder.panHandlers}>
                     <View style={StyleSheet.absoluteFill}>
                         {cards.map((card, i) => {
-                            const inputRange = [-cardHeight, 0];
-                            const outputRange = [
-                                cardHeight * i,
-                                (cardHeight - cardTitle) * -i
-                            ];
-                            if (i > 0) {
-                                inputRange.push(cardPadding * i);
-                                outputRange.push((cardHeight - cardPadding) * -i);
-                            }
                             const translateY = y.interpolate({
-                                inputRange,
-                                outputRange,
+                                inputRange: [-(cardHeight * 10), 0, 5 * cardPadding],
+                                outputRange: [
+                                    cardHeight * 10 * (i / 1.5),
+                                    (cardHeight - cardTitle) * -i,
+                                    (cardHeight - cardPadding) * -i
+                                ],
                                 extrapolateRight: "clamp"
                             });
                             return (
