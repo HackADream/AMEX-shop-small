@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     Image, ImageProps,
     ImageSourcePropType,
@@ -20,6 +20,7 @@ import {
     TextProps,
     useStyleSheet
 } from '@ui-kitten/components';
+import TicketModal from "react-native-ticket-modal";
 import { ImageOverlay } from './extra/image-overlay.component';
 import {Comment, Like, Product, ProductOption, ProductPrice, Profile} from './extra/contentTypes';
 import MapView, {Marker, PROVIDER_GOOGLE} from "react-native-maps";
@@ -147,12 +148,20 @@ export default (props): React.ReactElement => {
             Like.byMarkVolter(),
         ],
     );
-
-
     const pricePerPerson: ProductPrice = new ProductPrice(props.data.price, '£', 'person');
+
+    const [visible, setVisible] = useState(false);
 
     return (
         <ScrollView style={styles.container}>
+            <TicketModal
+                onBackdropPress={() => {
+                    setVisible(false)
+                }}
+                isVisible={visible}
+                buttonText={"REDEEM"}
+                footerSmallText={"Valid until 31/12/2020"}
+            />
             <ImageOverlay
                 style={styles.image}
                 source={props.data.image}
@@ -218,7 +227,7 @@ export default (props): React.ReactElement => {
                             defaultTitle=""
                             iconType="Ionicons"
                             defaultContent=""
-                            onPress={() => {}}
+                            onPress={() => {setVisible(true)}}
                             bottomRightText="30 Remains"
                             content="Lorem ipsum dolor sit."
                         />
