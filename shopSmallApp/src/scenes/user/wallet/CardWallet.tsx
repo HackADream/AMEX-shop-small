@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     },
 });
 
-const CreditCard = () => {
+const CardWallet = () => {
     const [containerHeight, setContainerHeight] = useState(height);
     const visibleCards = Math.floor(containerHeight / HEIGHT);
     const { gestureHandler, translation, state, velocity } = usePanGestureHandler();
@@ -105,4 +105,4 @@ const CreditCard = () => {
     );
 };
 
-export default CreditCard;
+export default CardWallet;
