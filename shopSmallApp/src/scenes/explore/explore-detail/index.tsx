@@ -207,7 +207,10 @@ export default (props): React.ReactElement => {
                 <Swiper
                     autoplay
                     horizontal={true}
-                    activeDotColor="#FF6347">
+                    activeDotColor="#FF6347"
+                    dotStyle={styles.dots}
+                    activeDotStyle={styles.activeDots}
+                >
                     <View style={styles.slide}>
                         <OfferCard
                             title="Buy 1 Get 1"
@@ -442,4 +445,22 @@ const themedStyles = StyleService.create({
     iconButton: {
         paddingHorizontal: 0,
     },
+    dots:{
+        width: 8,
+        height: 8,
+        borderRadius: 4,
+        marginLeft: 3,
+        marginRight: 3,
+        marginTop: 3,
+        marginBottom: -10,
+    },
+    activeDots: {
+        width: 8,
+        height: 8,
+        borderRadius: 4,
+        marginLeft: 3,
+        marginRight: 3,
+        marginTop: 3,
+        marginBottom: -10,
+    }
 });
