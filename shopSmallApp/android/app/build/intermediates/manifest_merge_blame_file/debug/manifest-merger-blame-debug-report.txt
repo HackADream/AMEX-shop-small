@@ -138,21 +138,28 @@
 74-->[:react-native-share] /Users/sweetie/GitHubWorkPlace/AMEX-Hackathon/AMEX-shop-small-app/shopSmallApp/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-61
 75        </provider>
 76
-77        <activity
-77-->[com.google.android.gms:play-services-base:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6d45d9e0505112f0eec54f8796757f91/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
-78            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-78-->[com.google.android.gms:play-services-base:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6d45d9e0505112f0eec54f8796757f91/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
-79            android:exported="false"
-79-->[com.google.android.gms:play-services-base:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6d45d9e0505112f0eec54f8796757f91/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
-80            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-80-->[com.google.android.gms:play-services-base:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6d45d9e0505112f0eec54f8796757f91/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
-81
-82        <meta-data
-82-->[com.google.android.gms:play-services-basement:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/44532050132f7774e6410b7920118951/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
-83            android:name="com.google.android.gms.version"
-83-->[com.google.android.gms:play-services-basement:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/44532050132f7774e6410b7920118951/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
-84            android:value="@integer/google_play_services_version" />
-84-->[com.google.android.gms:play-services-basement:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/44532050132f7774e6410b7920118951/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
-85    </application>
-86
-87</manifest>
+77        <meta-data
+77-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/35b47d4547addc0b700aafd28b6b8784/okhttp3-integration-4.11.0/AndroidManifest.xml:11:9-13:43
+78            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+78-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/35b47d4547addc0b700aafd28b6b8784/okhttp3-integration-4.11.0/AndroidManifest.xml:12:13-84
+79            android:value="GlideModule" />
+79-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/35b47d4547addc0b700aafd28b6b8784/okhttp3-integration-4.11.0/AndroidManifest.xml:13:13-40
+80
+81        <activity
+81-->[com.google.android.gms:play-services-base:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6d45d9e0505112f0eec54f8796757f91/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+82            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+82-->[com.google.android.gms:play-services-base:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6d45d9e0505112f0eec54f8796757f91/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+83            android:exported="false"
+83-->[com.google.android.gms:play-services-base:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6d45d9e0505112f0eec54f8796757f91/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+84            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+84-->[com.google.android.gms:play-services-base:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/6d45d9e0505112f0eec54f8796757f91/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+85
+86        <meta-data
+86-->[com.google.android.gms:play-services-basement:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/44532050132f7774e6410b7920118951/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+87            android:name="com.google.android.gms.version"
+87-->[com.google.android.gms:play-services-basement:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/44532050132f7774e6410b7920118951/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+88            android:value="@integer/google_play_services_version" />
+88-->[com.google.android.gms:play-services-basement:17.0.0] /Users/sweetie/.gradle/caches/transforms-2/files-2.1/44532050132f7774e6410b7920118951/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+89    </application>
+90
+91</manifest>
