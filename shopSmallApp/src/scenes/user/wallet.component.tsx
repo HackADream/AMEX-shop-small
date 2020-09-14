@@ -1,7 +1,7 @@
 import React from 'react';
 import {Icon, TopNavigation, TopNavigationAction} from "@ui-kitten/components";
 import {SafeAreaLayout} from "../../components/safe-area-layout.component";
-import {StyleSheet} from "react-native";
+import {StyleSheet, View} from "react-native";
 import Wallet from "./wallet/Wallet";
 
 const WalletScreen = ({navigation}): React.ReactElement => {
