@@ -29,22 +29,22 @@ const Card =  ({ type }: CardProps) => {
     let source: number;
     switch (type) {
         case Cards.Card1:
-            source = require("./assets/card1.png");
+            source = require("./assets/aeCard1.png");
             break;
         case Cards.Card2:
-            source = require("./assets/card2.png");
+            source = require("./assets/aeCard2.png");
             break;
         case Cards.Card3:
-            source = require("./assets/card3.png");
+            source = require("./assets/aeCard3.png");
             break;
         case Cards.Card4:
-            source = require("./assets/card4.png");
+            source = require("./assets/aeCard4.png");
             break;
         case Cards.Card5:
-            source = require("./assets/card5.png");
+            source = require("./assets/aeCard5.png");
             break;
         case Cards.Card6:
-            source = require("./assets/card6.png");
+            source = require("./assets/aeCard6.png");
             break;
         default:
             throw Error("Invalid card style");
