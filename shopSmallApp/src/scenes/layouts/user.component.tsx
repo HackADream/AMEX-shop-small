@@ -74,7 +74,7 @@ export const UserScreen = (props): React.ReactElement => {
                         </View>
                     </TouchableRipple>
                     <TouchableRipple onPress={() => {
-                        props.navigation.navigate("Wallet")
+                        props.navigation.navigate("CreditCard")
                     }}>
                         <View style={styles.menuItem}>
                             <Icon name="wallet-outline" type="Ionicons" color="#FF6347" size={25}/>

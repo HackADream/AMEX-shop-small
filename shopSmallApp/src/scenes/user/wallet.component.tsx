@@ -2,7 +2,7 @@ import React from 'react';
 import {Divider, Icon, Tab, TopNavigation, TopNavigationAction} from "@ui-kitten/components";
 import {SafeAreaLayout} from "../../components/safe-area-layout.component";
 import {StyleSheet, View} from "react-native";
-import Wallet from "./wallet/Wallet";
+import CreditCard from "./wallet/CreditCard";
 import {BrandTabBar} from "../../components/brand-tab-bar.component";
 
 const WalletScreen = ({navigation, state}): React.ReactElement => {
@@ -35,7 +35,7 @@ const WalletScreen = ({navigation, state}): React.ReactElement => {
             style={styles.container}
         >
             <TopNavigation
-                title={"Wallet"}
+                title={"CreditCard"}
                 accessoryLeft={renderBackAction}
             />
             <BrandTabBar

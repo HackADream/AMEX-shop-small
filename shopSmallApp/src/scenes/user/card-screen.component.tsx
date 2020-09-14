@@ -1,5 +1,5 @@
 import React from 'react';
-import Wallet from "./wallet/Wallet";
+import Wallet from "./wallet/CreditCard";
 import {SafeAreaLayout} from "../../components/safe-area-layout.component";
 import {StyleSheet, View} from "react-native";
 
