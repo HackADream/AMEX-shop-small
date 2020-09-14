@@ -18,11 +18,11 @@ const WalletScreen = ({navigation, state}): React.ReactElement => {
     );
 
     const GridIcon = (props) => (
-        <Icon name='arrow-ios-back' {...props} />
+        <Icon name='credit-card-outline' {...props} />
     );
 
     const ListIcon = (props) => (
-        <Icon name='arrow-ios-back' {...props} />
+        <Icon name='film-outline' {...props} />
     );
 
     const onTabSelect = (index: number): void => {
